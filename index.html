@@ -3,836 +3,270 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amit Sah — Enterprise Delivery & Transformation Leader</title>
-<meta name="description" content="Enterprise Delivery & Transformation Leader with 19 years in IT. Automation, AI-Enabled Operations, EU AI Act & Governance. Based in France.">
+<title>Amit Sah — Delivery & Transformation Manager</title>
+<meta name="description" content="Delivery and Transformation Manager with 19 years in IT. Automation, AI-Enabled Operations, EU AI Act. Based in France.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-/* ═══════════════════════════════════════════════════════
-   ROOT & RESET
-═══════════════════════════════════════════════════════ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --ink:      #0a0e1a;
-  --ink2:     #111827;
-  --gold:     #c9a84c;
-  --gold2:    #e8c96d;
-  --cream:    #f5f0e8;
-  --cream2:   #ede8df;
-  --mist:     rgba(201,168,76,0.12);
-  --border:   rgba(201,168,76,0.18);
-  --text:     #e8e4dc;
-  --text2:    rgba(232,228,220,0.55);
-  --text3:    rgba(232,228,220,0.32);
-  --white:    #ffffff;
+  --navy:    #070d1a;
+  --navy2:   #0d1528;
+  --blue:    #3b82f6;
+  --blue2:   #60a5fa;
+  --blue3:   #93c5fd;
+  --white:   #ffffff;
+  --offwhite:#f0f5ff;
+  --text:    #cbd5e1;
+  --text2:   #94a3b8;
+  --text3:   #475569;
+  --border:  rgba(59,130,246,0.15);
+  --card:    rgba(59,130,246,0.04);
 }
 
 html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--text); overflow-x: hidden; }
 
-body {
-  font-family: 'Syne', sans-serif;
-  background: var(--ink);
-  color: var(--text);
-  overflow-x: hidden;
-  cursor: none;
-}
-
-/* Custom cursor */
-.cursor {
-  position: fixed;
-  width: 8px; height: 8px;
-  background: var(--gold);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9999;
-  transition: transform 0.15s ease;
-  transform: translate(-50%, -50%);
-}
-.cursor-ring {
-  position: fixed;
-  width: 36px; height: 36px;
-  border: 1px solid rgba(201,168,76,0.4);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 9998;
-  transition: transform 0.08s ease, width 0.3s, height 0.3s, opacity 0.3s;
-  transform: translate(-50%, -50%);
-}
-
-/* ═══════════════════════════════════════════════════════
-   NOISE TEXTURE OVERLAY
-═══════════════════════════════════════════════════════ */
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
-  pointer-events: none;
-  z-index: 1;
-  opacity: 0.4;
-}
-
-/* ═══════════════════════════════════════════════════════
-   NAV
-═══════════════════════════════════════════════════════ */
+/* NAV */
 nav {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 100;
-  padding: 1.5rem 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(to bottom, rgba(10,14,26,0.95), transparent);
-  backdrop-filter: blur(12px);
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  padding: 1.2rem 5%;
+  display: flex; justify-content: space-between; align-items: center;
+  background: rgba(7,13,26,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
 }
+.nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--blue2); text-decoration: none; }
+.nav-links { display: flex; gap: 2rem; list-style: none; }
+.nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; color: var(--text2); text-decoration: none; transition: color 0.2s; }
+.nav-links a:hover { color: var(--blue2); }
 
-.nav-logo {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--gold);
-  letter-spacing: 0.05em;
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2.5rem;
-  list-style: none;
-}
-.nav-links a {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text2);
-  text-decoration: none;
-  transition: color 0.2s;
-}
-.nav-links a:hover { color: var(--gold); }
-
-/* ═══════════════════════════════════════════════════════
-   HERO
-═══════════════════════════════════════════════════════ */
+/* HERO */
 #hero {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 8rem 4rem 4rem;
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 8rem 5% 5rem;
   position: relative;
-  overflow: hidden;
 }
-
-/* Diagonal gold accent lines */
-#hero::before {
-  content: '';
-  position: absolute;
-  top: -20%; right: -10%;
-  width: 600px; height: 600px;
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  animation: rotate 40s linear infinite;
-}
-#hero::after {
-  content: '';
-  position: absolute;
-  top: 10%; right: 5%;
-  width: 300px; height: 300px;
-  border: 1px solid rgba(201,168,76,0.08);
-  border-radius: 50%;
-  animation: rotate 25s linear infinite reverse;
-}
-@keyframes rotate { to { transform: rotate(360deg); } }
-
-.hero-eyebrow {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--gold);
+.hero-line {
+  width: 40px; height: 2px;
+  background: var(--blue);
   margin-bottom: 1.5rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 0.2s forwards;
 }
-
 .hero-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(4rem, 10vw, 9rem);
-  font-weight: 300;
-  line-height: 0.9;
-  letter-spacing: -0.02em;
-  color: var(--cream);
-  margin-bottom: 0.5rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 0.4s forwards;
-}
-.hero-name em {
-  font-style: italic;
-  color: var(--gold);
-}
-
-.hero-title {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.2rem, 3vw, 2rem);
-  font-weight: 300;
-  font-style: italic;
-  color: var(--text2);
-  margin-bottom: 2.5rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 0.6s forwards;
-}
-
-.hero-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-bottom: 3rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 0.8s forwards;
-}
-.hero-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  padding: 0.4rem 1rem;
-  border: 1px solid var(--border);
-  color: var(--gold);
-  background: var(--mist);
-}
-
-.hero-cta {
-  display: flex;
-  gap: 1.5rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 1s forwards;
-}
-.btn-primary {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 1rem 2.5rem;
-  background: var(--gold);
-  color: var(--ink);
-  text-decoration: none;
-  font-weight: 500;
-  transition: background 0.2s, transform 0.2s;
-}
-.btn-primary:hover { background: var(--gold2); transform: translateY(-2px); }
-
-.btn-secondary {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 1rem 2.5rem;
-  border: 1px solid var(--border);
-  color: var(--text2);
-  text-decoration: none;
-  transition: border-color 0.2s, color 0.2s, transform 0.2s;
-}
-.btn-secondary:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
-
-.hero-stats {
-  position: absolute;
-  right: 4rem;
-  bottom: 4rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 1.2s forwards;
-}
-.stat-item { text-align: right; }
-.stat-number {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem;
-  font-weight: 300;
-  color: var(--gold);
-  line-height: 1;
-}
-.stat-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text3);
-  margin-top: 0.25rem;
-}
-
-.scroll-hint {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  opacity: 0;
-  animation: fadeUp 0.8s ease 1.4s forwards;
-}
-.scroll-line {
-  width: 1px;
-  height: 60px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
-  animation: scrollPulse 2s ease infinite;
-}
-@keyframes scrollPulse {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-.scroll-text {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.6rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text3);
-}
-
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* ═══════════════════════════════════════════════════════
-   SECTION COMMONS
-═══════════════════════════════════════════════════════ */
-section {
-  position: relative;
-  z-index: 2;
-}
-
-.section-inner {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 6rem 4rem;
-}
-
-.section-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.25em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.section-label::after {
-  content: '';
-  flex: 1;
-  max-width: 60px;
-  height: 1px;
-  background: var(--border);
-}
-
-.section-heading {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 300;
-  line-height: 1.1;
-  color: var(--cream);
-  margin-bottom: 3rem;
-}
-.section-heading em { font-style: italic; color: var(--gold); }
-
-/* ═══════════════════════════════════════════════════════
-   ABOUT
-═══════════════════════════════════════════════════════ */
-#about { background: var(--ink2); }
-
-.about-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 5rem;
-  align-items: start;
-}
-
-.about-text p {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.25rem;
-  font-weight: 300;
-  line-height: 1.8;
-  color: var(--text2);
-  margin-bottom: 1.5rem;
-}
-.about-text p strong {
-  color: var(--cream);
-  font-weight: 600;
-}
-
-.about-sidebar { display: flex; flex-direction: column; gap: 1.5rem; }
-
-.info-block {
-  border-left: 1px solid var(--border);
-  padding-left: 1.5rem;
-}
-.info-block .info-label {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--text3);
-  margin-bottom: 0.4rem;
-}
-.info-block .info-value {
-  font-size: 0.92rem;
-  color: var(--text);
-  line-height: 1.5;
-}
-
-/* ═══════════════════════════════════════════════════════
-   EXPERIENCE
-═══════════════════════════════════════════════════════ */
-#experience { background: var(--ink); }
-
-.exp-timeline { position: relative; }
-.exp-timeline::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0; bottom: 0;
-  width: 1px;
-  background: linear-gradient(to bottom, var(--gold), transparent);
-}
-
-.exp-item {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 3rem;
-  padding: 2.5rem 0 2.5rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
-  position: relative;
-  padding-left: 2rem;
-  transition: background 0.3s;
-}
-.exp-item::before {
-  content: '';
-  position: absolute;
-  left: -4px; top: 2.8rem;
-  width: 8px; height: 8px;
-  background: var(--gold);
-  border-radius: 50%;
-  box-shadow: 0 0 12px rgba(201,168,76,0.5);
-}
-.exp-item:last-child { border-bottom: none; }
-
-.exp-meta {}
-.exp-period {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.1em;
-  color: var(--gold);
-  margin-bottom: 0.5rem;
-}
-.exp-company {
-  font-size: 0.85rem;
-  color: var(--text2);
-  line-height: 1.4;
-}
-
-.exp-content {}
-.exp-role {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: var(--cream);
-  margin-bottom: 0.5rem;
-  line-height: 1.2;
-}
-.exp-sub {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1rem;
-  opacity: 0.7;
-}
-.exp-bullets {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 0.6rem;
-}
-.exp-bullets li {
-  font-size: 0.9rem;
-  color: var(--text2);
-  line-height: 1.6;
-  padding-left: 1.2rem;
-  position: relative;
-}
-.exp-bullets li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--gold);
-  opacity: 0.5;
-}
-
-/* ═══════════════════════════════════════════════════════
-   SKILLS
-═══════════════════════════════════════════════════════ */
-#skills { background: var(--ink2); }
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-
-.skill-card {
-  border: 1px solid var(--border);
-  padding: 2rem;
-  background: var(--mist);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s, border-color 0.3s;
-}
-.skill-card::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 2px;
-  background: linear-gradient(to right, var(--gold), transparent);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s;
-}
-.skill-card:hover { transform: translateY(-4px); border-color: var(--gold); }
-.skill-card:hover::before { transform: scaleX(1); }
-
-.skill-icon {
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-.skill-name {
-  font-family: 'Syne', sans-serif;
-  font-size: 0.92rem;
-  font-weight: 700;
-  color: var(--cream);
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.02em;
-}
-.skill-desc {
-  font-size: 0.82rem;
-  color: var(--text3);
-  line-height: 1.6;
-}
-
-/* ═══════════════════════════════════════════════════════
-   ACHIEVEMENTS
-═══════════════════════════════════════════════════════ */
-#achievements { background: var(--ink); }
-
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-}
-
-.achievement-card {
-  padding: 2.5rem;
-  border: 1px solid var(--border);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s;
-}
-.achievement-card:hover { transform: translateY(-4px); }
-.achievement-card::after {
-  content: '';
-  position: absolute;
-  bottom: 0; right: 0;
-  width: 80px; height: 80px;
-  background: radial-gradient(circle at bottom right, rgba(201,168,76,0.08), transparent);
-}
-
-.achievement-number {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3.5rem;
-  font-weight: 300;
-  color: var(--gold);
-  line-height: 1;
-  margin-bottom: 0.5rem;
-}
-.achievement-title {
-  font-size: 0.95rem;
-  font-weight: 700;
-  color: var(--cream);
-  margin-bottom: 0.5rem;
-  letter-spacing: 0.02em;
-}
-.achievement-desc {
-  font-size: 0.83rem;
-  color: var(--text3);
-  line-height: 1.6;
-}
-
-/* ═══════════════════════════════════════════════════════
-   CERTIFICATIONS
-═══════════════════════════════════════════════════════ */
-#certifications { background: var(--ink2); }
-
-.cert-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
-}
-
-.cert-item {
-  padding: 1.5rem;
-  border: 1px solid var(--border);
-  background: rgba(255,255,255,0.02);
-  transition: border-color 0.3s, background 0.3s;
-}
-.cert-item:hover {
-  border-color: var(--gold);
-  background: var(--mist);
-}
-.cert-name {
-  font-size: 0.88rem;
-  font-weight: 700;
-  color: var(--cream);
-  margin-bottom: 0.3rem;
-  line-height: 1.3;
-}
-.cert-issuer {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  color: var(--gold);
-  opacity: 0.7;
-}
-
-/* ═══════════════════════════════════════════════════════
-   LEARNING ROADMAP
-═══════════════════════════════════════════════════════ */
-#roadmap { background: var(--ink); }
-
-.roadmap-phases {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.roadmap-phase {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
-  align-items: start;
-  padding: 2rem;
-  border: 1px solid var(--border);
-  transition: border-color 0.3s;
-}
-.roadmap-phase:hover { border-color: var(--gold); }
-
-.phase-info {}
-.phase-tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.62rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 0.3rem 0.75rem;
-  display: inline-block;
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 400; line-height: 1;
+  color: var(--white);
   margin-bottom: 0.75rem;
 }
-.tag-now    { background: rgba(201,168,76,0.15); color: var(--gold);   border: 1px solid rgba(201,168,76,0.3); }
-.tag-mid    { background: rgba(59,130,246,0.1);  color: #93c5fd;       border: 1px solid rgba(59,130,246,0.3); }
-.tag-long   { background: rgba(124,58,237,0.1);  color: #c4b5fd;       border: 1px solid rgba(124,58,237,0.3); }
-.tag-always { background: rgba(5,150,105,0.1);   color: #6ee7b7;       border: 1px solid rgba(5,150,105,0.3); }
-
-.phase-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--cream);
-  margin-bottom: 0.25rem;
+.hero-name span { color: var(--blue2); font-style: italic; }
+.hero-role {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 300; color: var(--text2);
+  margin-bottom: 2rem; line-height: 1.5;
+  max-width: 600px;
 }
-.phase-duration {
+.hero-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem; }
+.tag {
   font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  color: var(--text3);
-}
-
-.phase-courses {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-.course-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-  padding: 0.75rem;
-  background: rgba(255,255,255,0.02);
-}
-.course-num {
-  width: 22px; height: 22px;
-  background: var(--gold);
-  color: var(--ink);
-  font-size: 0.65rem;
-  font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0;
-  font-family: 'DM Mono', monospace;
-}
-.course-text {}
-.course-name {
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--cream);
-  margin-bottom: 0.15rem;
-}
-.course-note {
-  font-size: 0.78rem;
-  color: var(--text3);
-}
-
-/* ═══════════════════════════════════════════════════════
-   CONTACT
-═══════════════════════════════════════════════════════ */
-#contact {
-  background: var(--ink2);
-  text-align: center;
-}
-
-.contact-inner {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 7rem 4rem;
-}
-
-.contact-pre {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.7rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--gold);
-  margin-bottom: 1.5rem;
-}
-
-.contact-heading {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 6vw, 4.5rem);
-  font-weight: 300;
-  line-height: 1.1;
-  color: var(--cream);
-  margin-bottom: 1.5rem;
-}
-.contact-heading em { color: var(--gold); font-style: italic; }
-
-.contact-sub {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.15rem;
-  font-weight: 300;
-  color: var(--text2);
-  line-height: 1.7;
-  margin-bottom: 3rem;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-}
-
-.contact-link {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--text2);
-  text-decoration: none;
-  padding: 0.9rem 2rem;
+  font-size: 0.68rem; letter-spacing: 0.1em;
+  padding: 0.35rem 0.9rem;
   border: 1px solid var(--border);
-  transition: color 0.2s, border-color 0.2s, transform 0.2s;
+  color: var(--blue3);
+  background: var(--card);
 }
-.contact-link:hover { color: var(--gold); border-color: var(--gold); transform: translateY(-2px); }
-.contact-link.primary {
-  background: var(--gold);
-  color: var(--ink);
-  border-color: var(--gold);
-  font-weight: 500;
+.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+.btn {
+  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em;
+  padding: 0.85rem 2rem; text-decoration: none;
+  transition: transform 0.2s, background 0.2s;
 }
-.contact-link.primary:hover { background: var(--gold2); }
+.btn:hover { transform: translateY(-2px); }
+.btn-blue { background: var(--blue); color: white; }
+.btn-blue:hover { background: var(--blue2); }
+.btn-outline { border: 1px solid var(--border); color: var(--text2); }
+.btn-outline:hover { border-color: var(--blue2); color: var(--blue2); }
 
-/* ═══════════════════════════════════════════════════════
-   FOOTER
-═══════════════════════════════════════════════════════ */
+.hero-stats {
+  position: absolute; right: 5%; bottom: 5%;
+  display: flex; flex-direction: column; gap: 1.5rem; text-align: right;
+}
+.stat-n { font-family: 'DM Serif Display', serif; font-size: 2.8rem; color: var(--blue2); line-height: 1; }
+.stat-l { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text3); margin-top: 0.2rem; }
+
+/* SECTIONS */
+.section { position: relative; }
+.section-inner { max-width: 1060px; margin: 0 auto; padding: 5.5rem 5%; }
+.sec-eyebrow {
+  font-family: 'DM Mono', monospace; font-size: 0.68rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--blue); margin-bottom: 0.75rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.sec-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--blue); }
+.sec-heading {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 400; color: var(--white);
+  margin-bottom: 2.5rem; line-height: 1.15;
+}
+.sec-heading em { font-style: italic; color: var(--blue2); }
+
+/* ABOUT */
+#about { background: var(--navy2); }
+.about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start; }
+.about-text p {
+  font-size: 1rem; font-weight: 300; line-height: 1.8;
+  color: var(--text); margin-bottom: 1.25rem;
+}
+.about-text p strong { color: var(--white); font-weight: 600; }
+.about-cards { display: flex; flex-direction: column; gap: 1rem; }
+.info-card {
+  padding: 1.1rem 1.25rem;
+  border: 1px solid var(--border);
+  background: var(--card);
+}
+.info-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.35rem; }
+.info-val { font-size: 0.88rem; color: var(--text); line-height: 1.5; }
+
+/* EXPERIENCE */
+#experience { background: var(--navy); }
+.exp-company-block { margin-bottom: 2.5rem; }
+.exp-company-header {
+  display: flex; align-items: baseline; gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: rgba(59,130,246,0.06);
+  border-left: 3px solid var(--blue);
+  margin-bottom: 1rem;
+}
+.exp-company-name { font-size: 0.92rem; font-weight: 700; color: var(--white); }
+.exp-company-sub { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--text2); letter-spacing: 0.05em; }
+
+.exp-phase {
+  display: grid; grid-template-columns: 180px 1fr;
+  gap: 1.5rem; padding: 1.25rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.exp-phase:last-child { border-bottom: none; }
+.exp-period { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--blue2); line-height: 1.4; }
+.exp-role-title { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
+.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+.exp-bullets li { font-size: 0.87rem; color: var(--text); line-height: 1.6; padding-left: 1.1rem; position: relative; }
+.exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--blue); opacity: 0.6; }
+
+/* SKILLS */
+#skills { background: var(--navy2); }
+.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.skill-card {
+  padding: 1.5rem; border: 1px solid var(--border);
+  background: var(--card); transition: border-color 0.3s, transform 0.3s;
+}
+.skill-card:hover { border-color: var(--blue2); transform: translateY(-3px); }
+.skill-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
+.skill-name { font-size: 0.88rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
+.skill-desc { font-size: 0.78rem; color: var(--text2); line-height: 1.6; }
+
+/* ACHIEVEMENTS */
+#achievements { background: var(--navy); }
+.ach-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
+.ach-card { padding: 2rem; border: 1px solid var(--border); background: var(--card); transition: transform 0.3s; }
+.ach-card:hover { transform: translateY(-3px); }
+.ach-num { font-family: 'DM Serif Display', serif; font-size: 3rem; color: var(--blue2); line-height: 1; margin-bottom: 0.5rem; }
+.ach-title { font-size: 0.92rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
+.ach-desc { font-size: 0.82rem; color: var(--text2); line-height: 1.6; }
+
+/* CERTS */
+#certifications { background: var(--navy2); }
+.cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.85rem; }
+.cert-card { padding: 1.1rem 1.25rem; border: 1px solid var(--border); background: var(--card); transition: border-color 0.2s; }
+.cert-card:hover { border-color: var(--blue2); }
+.cert-name { font-size: 0.85rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; line-height: 1.3; }
+.cert-issuer { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--blue); letter-spacing: 0.08em; }
+
+/* ROADMAP */
+#roadmap { background: var(--navy); }
+.roadmap-list { display: flex; flex-direction: column; gap: 1rem; }
+.roadmap-item {
+  display: grid; grid-template-columns: 160px 1fr;
+  gap: 2rem; align-items: start;
+  padding: 1.5rem; border: 1px solid var(--border);
+  background: var(--card); transition: border-color 0.3s;
+}
+.roadmap-item:hover { border-color: var(--blue2); }
+.rm-phase { }
+.rm-badge {
+  font-family: 'DM Mono', monospace; font-size: 0.62rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.25rem 0.6rem; display: inline-block; margin-bottom: 0.5rem;
+  border: 1px solid var(--border); color: var(--blue3);
+}
+.rm-title { font-size: 0.88rem; font-weight: 700; color: var(--white); margin-bottom: 0.2rem; }
+.rm-duration { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--text3); }
+.rm-courses { display: flex; flex-direction: column; gap: 0.6rem; }
+.rm-course { display: flex; gap: 0.75rem; align-items: flex-start; }
+.rm-num {
+  width: 20px; height: 20px; background: var(--blue); color: white;
+  font-size: 0.65rem; font-weight: 700; font-family: 'DM Mono', monospace;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.rm-cname { font-size: 0.85rem; font-weight: 600; color: var(--white); }
+.rm-cnote { font-size: 0.75rem; color: var(--text2); margin-top: 0.1rem; }
+
+/* CONTACT */
+#contact { background: var(--navy2); text-align: center; }
+.contact-inner { max-width: 620px; margin: 0 auto; padding: 6rem 5%; }
+.contact-pre { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
+.contact-h { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
+.contact-h em { color: var(--blue2); font-style: italic; }
+.contact-sub { font-size: 0.95rem; font-weight: 300; color: var(--text2); line-height: 1.7; margin-bottom: 2.5rem; }
+.contact-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
+.cbtn {
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
+  padding: 0.85rem 1.75rem; text-decoration: none;
+  border: 1px solid var(--border); color: var(--text2);
+  transition: border-color 0.2s, color 0.2s, transform 0.2s;
+}
+.cbtn:hover { border-color: var(--blue2); color: var(--blue2); transform: translateY(-2px); }
+.cbtn.primary { background: var(--blue); color: white; border-color: var(--blue); }
+.cbtn.primary:hover { background: var(--blue2); border-color: var(--blue2); }
+
+/* FOOTER */
 footer {
-  background: var(--ink);
-  padding: 2rem 4rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background: var(--navy); padding: 1.5rem 5%;
+  display: flex; justify-content: space-between; align-items: center;
   border-top: 1px solid var(--border);
 }
-.footer-name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1rem;
-  color: var(--gold);
-}
-.footer-copy {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  letter-spacing: 0.1em;
-  color: var(--text3);
-}
+.footer-name { font-family: 'DM Serif Display', serif; font-size: 1rem; color: var(--blue2); }
+.footer-copy { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text3); }
 
-/* ═══════════════════════════════════════════════════════
-   SCROLL REVEAL
-═══════════════════════════════════════════════════════ */
-.reveal {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
-}
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+/* REVEAL */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
 
-/* ═══════════════════════════════════════════════════════
-   RESPONSIVE
-═══════════════════════════════════════════════════════ */
-@media (max-width: 900px) {
-  nav { padding: 1.25rem 2rem; }
+/* RESPONSIVE */
+@media (max-width: 860px) {
   .nav-links { display: none; }
-  #hero { padding: 7rem 2rem 3rem; }
-  .hero-stats { position: static; flex-direction: row; flex-wrap: wrap; margin-top: 3rem; }
+  .hero-stats { position: static; flex-direction: row; flex-wrap: wrap; margin-top: 2.5rem; }
   .stat-item { text-align: left; }
-  .section-inner { padding: 4rem 2rem; }
-  .about-grid { grid-template-columns: 1fr; gap: 3rem; }
-  .exp-item { grid-template-columns: 1fr; gap: 0.5rem; }
+  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
-  .achievements-grid { grid-template-columns: 1fr; }
+  .ach-grid { grid-template-columns: 1fr; }
   .cert-grid { grid-template-columns: 1fr 1fr; }
-  .roadmap-phase { grid-template-columns: 1fr; gap: 1rem; }
-  footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .exp-phase { grid-template-columns: 1fr; gap: 0.5rem; }
+  .roadmap-item { grid-template-columns: 1fr; gap: 1rem; }
 }
-@media (max-width: 600px) {
-  .skills-grid { grid-template-columns: 1fr; }
-  .cert-grid { grid-template-columns: 1fr; }
-  .hero-cta { flex-direction: column; }
-  .contact-inner { padding: 5rem 2rem; }
+@media (max-width: 560px) {
+  .skills-grid, .cert-grid { grid-template-columns: 1fr; }
+  .hero-btns { flex-direction: column; }
 }
 </style>
 </head>
 <body>
 
-<!-- Custom Cursor -->
-<div class="cursor" id="cursor"></div>
-<div class="cursor-ring" id="cursorRing"></div>
-
-<!-- ═══ NAV ═══ -->
 <nav>
-  <a href="#hero" class="nav-logo">AS</a>
+  <a href="#hero" class="nav-logo">Amit Sah</a>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
@@ -844,481 +278,369 @@ footer {
   </ul>
 </nav>
 
-<!-- ═══ HERO ═══ -->
+<!-- HERO -->
 <section id="hero">
-  <div class="hero-eyebrow">Enterprise IT Leader · Based in France · Open to Europe</div>
-  <h1 class="hero-name">Amit<br><em>Sah</em></h1>
-  <p class="hero-title">Delivery & Transformation Manager</p>
+  <div class="hero-line"></div>
+  <h1 class="hero-name">Amit <span>Sah</span></h1>
+  <p class="hero-role">Delivery & Transformation Manager &nbsp;·&nbsp; Automation Leadership &nbsp;·&nbsp; AI-Enabled Operations</p>
   <div class="hero-tags">
-    <span class="hero-tag">Automation Leadership</span>
-    <span class="hero-tag">AI-Enabled Operations</span>
-    <span class="hero-tag">EU AI Act & Governance</span>
-    <span class="hero-tag">Service Delivery</span>
-    <span class="hero-tag">Client Transformation</span>
+    <span class="tag">19 Years in IT</span>
+    <span class="tag">Based in France</span>
+    <span class="tag">EU AI Act & Governance</span>
+    <span class="tag">Enterprise Delivery</span>
+    <span class="tag">Automation</span>
   </div>
-  <div class="hero-cta">
-    <a href="#contact" class="btn-primary">Get In Touch</a>
-    <a href="#experience" class="btn-secondary">View Experience</a>
+  <div class="hero-btns">
+    <a href="#contact" class="btn btn-blue">Get In Touch</a>
+    <a href="Amit_Sah_CV.pdf" download class="btn btn-outline">Download CV</a>
   </div>
   <div class="hero-stats">
-    <div class="stat-item">
-      <div class="stat-number">19</div>
-      <div class="stat-label">Years in IT</div>
+    <div>
+      <div class="stat-n">19</div>
+      <div class="stat-l">Years in IT</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-number">50+</div>
-      <div class="stat-label">Deals Led</div>
+    <div>
+      <div class="stat-n">50+</div>
+      <div class="stat-l">Deals Led</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-number">$149M</div>
-      <div class="stat-label">Largest Deal</div>
+    <div>
+      <div class="stat-n">$149M</div>
+      <div class="stat-l">Largest Deal</div>
     </div>
-  </div>
-  <div class="scroll-hint">
-    <div class="scroll-line"></div>
-    <span class="scroll-text">Scroll</span>
   </div>
 </section>
 
-<!-- ═══ ABOUT ═══ -->
+<!-- ABOUT -->
 <section id="about">
   <div class="section-inner">
-    <div class="section-label">Who I Am</div>
-    <h2 class="section-heading">At the intersection of<br><em>technology & outcomes</em></h2>
+    <div class="sec-eyebrow">About</div>
+    <h2 class="sec-heading">Who I <em>am</em></h2>
     <div class="about-grid reveal">
       <div class="about-text">
-        <p>I help enterprises <strong>deliver, transform, and scale</strong> — navigating the complexity of people, technology, and business goals that others find difficult to untangle.</p>
-        <p>With 19 years of experience across service delivery, automation, client onboarding, and operational transformation, I've led programmes spanning continents, industries, and complexity levels. Currently based in <strong>France</strong>, working within Capgemini's European practice.</p>
-        <p>I thrive where delivery meets strategy — where the challenge isn't just keeping the lights on, but <strong>reimagining how the lights should work.</strong></p>
+        <p>I've spent <strong>19 years working in IT delivery, automation, and transformation</strong> — leading teams, onboarding clients, and making sure complex programmes actually land. Most of my work sits between technology and the people who need to use it.</p>
+        <p>I've worked across client onboarding, service delivery, and automation programmes in complex, multi-country environments where things are rarely straightforward. Currently based in <strong>France</strong>, working with European enterprise clients as part of Capgemini's onsite team.</p>
+        <p>I'm comfortable working across geographies, cultures, and technology domains — and have spent much of my career navigating the gap between what a client expects and what a delivery team can actually do.</p>
       </div>
-      <div class="about-sidebar">
-        <div class="info-block">
-          <div class="info-label">Current Location</div>
-          <div class="info-value">France (onsite) · European Timezone</div>
+      <div class="about-cards">
+        <div class="info-card">
+          <div class="info-label">Location</div>
+          <div class="info-val">France (onsite) · European Timezone</div>
         </div>
-        <div class="info-block">
+        <div class="info-card">
           <div class="info-label">Current Role</div>
-          <div class="info-value">Transversal Delivery Lead · Capgemini</div>
+          <div class="info-val">Transversal Delivery Lead · Capgemini</div>
         </div>
-        <div class="info-block">
+        <div class="info-card">
           <div class="info-label">Languages</div>
-          <div class="info-value">English (Native) · Hindi (Native) · French (A2, developing) · Kumaoni</div>
+          <div class="info-val">English (Fluent) · Hindi (Native) · French A2 · Kumaoni</div>
         </div>
-        <div class="info-block">
-          <div class="info-label">Targeting</div>
-          <div class="info-value">Senior roles in Delivery, Transformation, and AI-Enabled Operations within international organisations in Europe</div>
+        <div class="info-card">
+          <div class="info-label">Looking For</div>
+          <div class="info-val">Senior roles in Delivery, Transformation & AI-Enabled Operations in Europe</div>
         </div>
-        <div class="info-block">
+        <div class="info-card">
           <div class="info-label">Contact</div>
-          <div class="info-value">amitmesah@gmail.com</div>
+          <div class="info-val">amitmesah@gmail.com</div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═══ EXPERIENCE ═══ -->
+<!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
-    <div class="section-label">Career Journey</div>
-    <h2 class="section-heading">19 years of<br><em>enterprise delivery</em></h2>
-    <div class="exp-timeline">
+    <div class="sec-eyebrow">Career</div>
+    <h2 class="sec-heading">19 years of <em>enterprise delivery</em></h2>
 
-      <div class="exp-item reveal">
-        <div class="exp-meta">
-          <div class="exp-period">Oct 2025 — Present</div>
-          <div class="exp-company">Capgemini<br>France (Onsite)</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Transversal Delivery Lead</div>
-          <div class="exp-sub">Hermes Account · Automation + Network Operations</div>
+    <!-- Capgemini France -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <span class="exp-company-name">Capgemini Technology Services — France (Onsite)</span>
+        <span class="exp-company-sub">Jan 2023 – Present · Progressive roles across Hermes account and French automation practice</span>
+      </div>
+
+      <div class="exp-phase">
+        <div class="exp-period">Jan 2026 – Present<br><br>Oct 2025 – Dec 2025</div>
+        <div>
+          <div class="exp-role-title">Transversal Delivery Lead + Network Team (from Jan 2026) — Hermes Account</div>
           <ul class="exp-bullets">
-            <li>Cross-functional leadership spanning automation delivery and network operations — 5 onshore + 4 offshore resources, no single-technology constraint.</li>
-            <li>Driving Service Improvement Plans and strategic initiatives directly assigned by senior management.</li>
-            <li>Transversal point of contact across all technology towers on the account.</li>
+            <li>Cross-functional leadership spanning automation delivery and network operations across all technology towers — 5 onshore + 4 offshore resources.</li>
+            <li>Driving Service Improvement Plans and strategic initiatives directly assigned by senior management, with no single-technology constraint.</li>
           </ul>
         </div>
       </div>
 
-      <div class="exp-item reveal">
-        <div class="exp-meta">
-          <div class="exp-period">Nov 2023 — Sep 2025</div>
-          <div class="exp-company">Capgemini<br>France (Onsite)</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Automation Tools Lead</div>
-          <div class="exp-sub">Cognitive & Robotics Practice · 8–9 Enterprise Accounts</div>
+      <div class="exp-phase">
+        <div class="exp-period">Oct 2023 – Sep 2025</div>
+        <div>
+          <div class="exp-role-title">Automation Tools Lead — Cognitive & Robotics (C&R) Practice</div>
           <ul class="exp-bullets">
-            <li>SPOC between 8–9 enterprise client accounts and Capgemini's French and Indian automation teams — qualifying, routing, and progressing automation use cases end-to-end.</li>
-            <li>Dual role as TIO Business Partner: drove AIOps deployment and GenAI proof-of-concept programmes across the France region.</li>
-            <li>Recognised by Capgemini senior leadership at France region level for contributions to the automation practice.</li>
+            <li>SPOC between 9 enterprise client accounts and Capgemini's French and Indian automation teams — qualifying, routing, and progressing automation use cases end-to-end.</li>
+            <li>Dual role as TIO Business Partner: drove AIOps deployment and GenAI proof-of-concept programmes across multiple accounts.</li>
+            <li>Recognised by Capgemini CIS Infrastructure Services CEO for contributions to the France automation practice.</li>
+            <li>Participated in presales engagements for Air France and CCF Bank — contributing to solution design and client-facing presentations.</li>
           </ul>
         </div>
       </div>
 
-      <div class="exp-item reveal">
-        <div class="exp-meta">
-          <div class="exp-period">Jan 2023 — Oct 2023</div>
-          <div class="exp-company">Capgemini<br>France (Onsite)</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Application Domain Manager & Automation Lead</div>
-          <div class="exp-sub">Hermes Account · OPCON + Middleware Teams</div>
+      <div class="exp-phase">
+        <div class="exp-period">Jan 2023 – Sep 2023</div>
+        <div>
+          <div class="exp-role-title">Application Domain Manager & Automation Lead — Hermes Account</div>
           <ul class="exp-bullets">
-            <li>Managed two India-based delivery teams (OPCON batch scheduling + Middleware) ensuring SLA adherence from day one of France assignment.</li>
-            <li>Maintained parallel automation leadership while navigating a complex internal stakeholder environment with professionalism.</li>
+            <li>Relocated to France; managed two India-based delivery teams — OPCON (batch scheduling) and Middleware — ensuring SLA adherence from day one.</li>
+            <li>Maintained parallel automation leadership responsibilities alongside ADM duties.</li>
           </ul>
         </div>
       </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-meta">
-          <div class="exp-period">Jun 2017 — Jan 2023</div>
-          <div class="exp-company">Capgemini<br>Pune, India</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Automation Lead</div>
-          <div class="exp-sub">Service Delivery · Onboarding · South Europe Automation</div>
-          <ul class="exp-bullets">
-            <li>Spearheaded 50+ client onboarding and transition deals — individual values up to USD 149M — across banking, aviation, cruise/shipping, railway, chemical, and fashion.</li>
-            <li>Led South Europe automation programmes: defined strategy, ran stakeholder workshops, applied AI/ML analysis on ticket and effort data.</li>
-            <li>Managed multi-geography delivery teams, maintained SLA compliance, and identified upselling opportunities leading to new business wins.</li>
-            <li>Contributed to presales engagements for Air France and CCF Bank.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-meta">
-          <div class="exp-period">Sep 2014 — Mar 2017</div>
-          <div class="exp-company">Tech Mahindra<br>Pune, India</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Solution Lead</div>
-          <div class="exp-sub">HP SIM Platform · Infrastructure</div>
-          <ul class="exp-bullets">
-            <li>Led end-to-end resolution of a critical HP SIM platform issue — fully compliant environment delivered from assessment to sign-off.</li>
-            <li>Managed scope, timelines, risk, and daily client communication across HP SiteScope, NNMi, OMW, Asset Manager, and MS SCOM.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-meta">
-          <div class="exp-period">Nov 2011 — Aug 2014</div>
-          <div class="exp-company">Hewlett Packard<br>Bengaluru, India</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Technical Solution Consultant</div>
-          <div class="exp-sub">HP SIM · Server Hardware</div>
-          <ul class="exp-bullets">
-            <li>High-volume HP SIM technical support (~20 calls/day), including remote infrastructure builds from scratch.</li>
-            <li>Awarded Certificate of Excellence for two consecutive quarters (H2 2013).</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-item reveal">
-        <div class="exp-meta">
-          <div class="exp-period">2007 — 2011</div>
-          <div class="exp-company">Renovision · Wipro<br>PCS Technology</div>
-        </div>
-        <div class="exp-content">
-          <div class="exp-role">Data Centre & Field Operations</div>
-          <div class="exp-sub">Infrastructure · IBM AIX · End-User Computing</div>
-          <ul class="exp-bullets">
-            <li>Managed 30+ enterprise clients at Bharti Airtel Data Centre; delivered server/network hardware support and IBM AIX (P-series) administration.</li>
-          </ul>
-        </div>
-      </div>
-
     </div>
+
+    <!-- Capgemini India -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <span class="exp-company-name">Capgemini Technology Services — India</span>
+        <span class="exp-company-sub">Jun 2017 – Jan 2023 · Mumbai (2017–2018) · Pune (2018–2023) · Progressive roles across delivery, automation and onboarding</span>
+      </div>
+
+      <div class="exp-phase">
+        <div class="exp-period">Jan 2021 – Jan 2023</div>
+        <div>
+          <div class="exp-role-title">Automation Lead — Hermes Account</div>
+          <ul class="exp-bullets">
+            <li>Solely responsible for automation leadership on the Hermes account — identifying use cases, managing automation delivery, and handling transversal issues across the account.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-phase">
+        <div class="exp-period">Jul 2020 – Jan 2021</div>
+        <div>
+          <div class="exp-role-title">Delivery Team Lead — Hermes Account</div>
+          <ul class="exp-bullets">
+            <li>Led a team of 18 resources across Windows, Linux, Citrix, MSSQL, Oracle, and SharePoint platform towers.</li>
+            <li>From Jan 2021, took on additional Automation Lead responsibilities until a replacement was onboarded mid-2021.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-phase">
+        <div class="exp-period">Sep 2018 – Jun 2020</div>
+        <div>
+          <div class="exp-role-title">Regional Automation Lead — South Europe</div>
+          <ul class="exp-bullets">
+            <li>Worked across South Europe delivery accounts — reviewing tickets, identifying automation use cases, and coordinating with the dedicated automation team to ensure use cases were properly scoped and delivered.</li>
+            <li>Frequently had to make the case for automation where delivery teams were resistant — building the argument that a process qualified as a viable use case and following it through.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="exp-phase">
+        <div class="exp-period">Jun 2017 – Aug 2018</div>
+        <div>
+          <div class="exp-role-title">Onboarding Manager</div>
+          <ul class="exp-bullets">
+            <li>Onboarded 50+ clients onto Capgemini's Tools and Automation platform — defining transition plans, timelines, risk assessments, and methodologies across banking, aviation, cruise/shipping, railway, chemical, and fashion industries. Individual deal values up to USD 149M.</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tech Mahindra -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <span class="exp-company-name">Tech Mahindra</span>
+        <span class="exp-company-sub">Sep 2014 – Mar 2017 · Pune</span>
+      </div>
+      <div class="exp-phase">
+        <div class="exp-period">Sep 2014 – Mar 2017</div>
+        <div>
+          <div class="exp-role-title">Solution Lead</div>
+          <ul class="exp-bullets">
+            <li>Led end-to-end resolution of a critical HP SIM platform issue — delivered a fully compliant environment from assessment to sign-off, managing scope, timelines, risk, and daily client communication.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- HP -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <span class="exp-company-name">Hewlett Packard Enterprise</span>
+        <span class="exp-company-sub">Nov 2011 – Aug 2014 · Bengaluru</span>
+      </div>
+      <div class="exp-phase">
+        <div class="exp-period">Nov 2011 – Aug 2014</div>
+        <div>
+          <div class="exp-role-title">Technical Solution Consultant</div>
+          <ul class="exp-bullets">
+            <li>HP SIM technical support including remote infrastructure builds from scratch. Awarded Certificate of Excellence for two consecutive quarters (H2 2013).</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Earlier -->
+    <div class="exp-company-block reveal">
+      <div class="exp-company-header">
+        <span class="exp-company-name">Earlier — Data Centre & Field Operations</span>
+        <span class="exp-company-sub">Renovision · Wipro Infotech · PCS Technology · 2007–2011</span>
+      </div>
+      <div class="exp-phase">
+        <div class="exp-period">2007 – 2011</div>
+        <div>
+          <div class="exp-role-title">Operations & Field Engineering</div>
+          <ul class="exp-bullets">
+            <li>Managed 30+ enterprise clients at Bharti Airtel Data Centre; server/network hardware support and IBM AIX (P-series) administration.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
-<!-- ═══ SKILLS ═══ -->
+<!-- SKILLS -->
 <section id="skills">
   <div class="section-inner">
-    <div class="section-label">Expertise</div>
-    <h2 class="section-heading">Core<br><em>competencies</em></h2>
+    <div class="sec-eyebrow">Expertise</div>
+    <h2 class="sec-heading">Core <em>competencies</em></h2>
     <div class="skills-grid">
-      <div class="skill-card reveal">
-        <div class="skill-icon">🚀</div>
-        <div class="skill-name">Service Delivery Management</div>
-        <div class="skill-desc">ITIL V4 · SLA ownership · multi-tower operations · onshore and offshore team leadership</div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🔄</div>
-        <div class="skill-name">Transition & Transformation</div>
-        <div class="skill-desc">50+ enterprise deals · risk assessment · methodology definition · stakeholder management</div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">⚙️</div>
-        <div class="skill-name">Automation Leadership</div>
-        <div class="skill-desc">Programme strategy · use case identification · RBA · productivity industrialisation · Scrum</div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🤖</div>
-        <div class="skill-name">AI-Enabled Operations</div>
-        <div class="skill-desc">AIOps · GenAI PoC delivery · AI workflow design · enterprise AI adoption</div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🇪🇺</div>
-        <div class="skill-name">EU AI Act & Governance</div>
-        <div class="skill-desc">AI governance awareness · responsible AI · compliance positioning · European regulatory context</div>
-      </div>
-      <div class="skill-card reveal">
-        <div class="skill-icon">🤝</div>
-        <div class="skill-name">Stakeholder & Account Management</div>
-        <div class="skill-desc">C-level engagement · presales · upselling · cross-cultural team leadership</div>
-      </div>
+      <div class="skill-card reveal"><div class="skill-icon">🚀</div><div class="skill-name">Service Delivery Management</div><div class="skill-desc">ITIL V4 · SLA ownership · multi-tower operations · onshore and offshore team leadership</div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🔄</div><div class="skill-name">Transition & Transformation</div><div class="skill-desc">50+ enterprise deals · risk assessment · methodology definition · stakeholder management</div></div>
+      <div class="skill-card reveal"><div class="skill-icon">⚙️</div><div class="skill-name">Automation Leadership</div><div class="skill-desc">Programme strategy · use case identification · RBA · productivity industrialisation · Scrum</div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🤖</div><div class="skill-name">AI-Enabled Operations</div><div class="skill-desc">AIOps · GenAI PoC delivery · AI workflow design · enterprise AI adoption</div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🇪🇺</div><div class="skill-name">EU AI Act & Governance</div><div class="skill-desc">AI governance awareness · responsible AI · compliance positioning · European regulatory context</div></div>
+      <div class="skill-card reveal"><div class="skill-icon">🤝</div><div class="skill-name">Stakeholder Management</div><div class="skill-desc">C-level engagement · presales · cross-cultural team leadership · account management</div></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ ACHIEVEMENTS ═══ -->
+<!-- ACHIEVEMENTS -->
 <section id="achievements">
   <div class="section-inner">
-    <div class="section-label">Impact</div>
-    <h2 class="section-heading">Numbers that<br><em>tell the story</em></h2>
-    <div class="achievements-grid">
-      <div class="achievement-card reveal">
-        <div class="achievement-number">50+</div>
-        <div class="achievement-title">Enterprise Transitions Led</div>
-        <div class="achievement-desc">Client onboarding deals across banking, aviation, cruise/shipping, railway, chemical, and fashion industries — spanning multiple continents and complexity levels.</div>
-      </div>
-      <div class="achievement-card reveal">
-        <div class="achievement-number">$149M</div>
-        <div class="achievement-title">Largest Single Deal Value</div>
-        <div class="achievement-desc">Led transition programmes with individual deal values reaching USD 149 million — managing timelines, risk assessments, and multi-stakeholder delivery.</div>
-      </div>
-      <div class="achievement-card reveal">
-        <div class="achievement-number">8–9</div>
-        <div class="achievement-title">Accounts Managed Simultaneously</div>
-        <div class="achievement-desc">Coordinated automation demand and delivery across 8–9 enterprise accounts as Automation Tools Lead for Capgemini's French Cognitive & Robotics practice.</div>
-      </div>
-      <div class="achievement-card reveal">
-        <div class="achievement-number">CEO</div>
-        <div class="achievement-title">Level Recognition</div>
-        <div class="achievement-desc">Personally recognised by Steve Hilton (Capgemini CEO level) via appreciation mail for sustained strategic contributions to the France region automation practice.</div>
-      </div>
+    <div class="sec-eyebrow">Impact</div>
+    <h2 class="sec-heading">A few things <em>I'm proud of</em></h2>
+    <div class="ach-grid">
+      <div class="ach-card reveal"><div class="ach-num">50+</div><div class="ach-title">Client Transitions Led</div><div class="ach-desc">Onboarded clients across banking, aviation, cruise/shipping, railway, chemical, and fashion — spanning multiple continents.</div></div>
+      <div class="ach-card reveal"><div class="ach-num">$149M</div><div class="ach-title">Largest Single Deal</div><div class="ach-desc">Led transition programmes with individual deal values reaching USD 149 million — managing timelines, risk, and multi-stakeholder delivery.</div></div>
+      <div class="ach-card reveal"><div class="ach-num">9</div><div class="ach-title">Accounts Managed Simultaneously</div><div class="ach-desc">Coordinated automation demand and delivery across 9 enterprise accounts as Automation Tools Lead for Capgemini's French C&R practice.</div></div>
+      <div class="ach-card reveal"><div class="ach-num">CEO</div><div class="ach-title">Level Recognition</div><div class="ach-desc">Recognised by Capgemini CIS Infrastructure Services CEO for contributions to the France automation practice.</div></div>
     </div>
   </div>
 </section>
 
-<!-- ═══ CERTIFICATIONS ═══ -->
+<!-- CERTIFICATIONS -->
 <section id="certifications">
   <div class="section-inner">
-    <div class="section-label">Credentials</div>
-    <h2 class="section-heading">Certifications &<br><em>training</em></h2>
-    <div class="cert-grid reveal">
-      <div class="cert-item">
-        <div class="cert-name">ITIL V4 Foundation</div>
-        <div class="cert-issuer">Axelos</div>
+    <div class="sec-eyebrow">Credentials</div>
+    <h2 class="sec-heading">Certifications & <em>training</em></h2>
+    <div style="display:flex;flex-direction:column;gap:1.5rem;">
+
+      <div>
+        <div class="sec-eyebrow" style="margin-bottom:0.75rem;">Certification</div>
+        <div class="cert-grid" style="grid-template-columns:repeat(3,1fr);">
+          <div class="cert-card"><div class="cert-name">ITIL V4 Foundation</div><div class="cert-issuer">Axelos</div></div>
+        </div>
       </div>
-      <div class="cert-item">
-        <div class="cert-name">PMP — Project Management Professional</div>
-        <div class="cert-issuer">PMI</div>
+
+      <div>
+        <div class="sec-eyebrow" style="margin-bottom:0.75rem;">Personal Training — Self Funded</div>
+        <div class="cert-grid" style="grid-template-columns:repeat(3,1fr);">
+          <div class="cert-card"><div class="cert-name">PMP Training</div><div class="cert-issuer">PMI</div></div>
+          <div class="cert-card"><div class="cert-name">VMware vSphere 5</div><div class="cert-issuer">G.T. Enterprises</div></div>
+          <div class="cert-card"><div class="cert-name">RHEL 7</div><div class="cert-issuer">New Horizon Development Centre</div></div>
+        </div>
       </div>
-      <div class="cert-item">
-        <div class="cert-name">Azure AI Engineer Associate Training (AI-102)</div>
-        <div class="cert-issuer">Microsoft — Badge on LinkedIn</div>
+
+      <div>
+        <div class="sec-eyebrow" style="margin-bottom:0.75rem;">Capgemini Internal Training</div>
+        <div class="cert-grid" style="grid-template-columns:repeat(3,1fr);">
+          <div class="cert-card"><div class="cert-name">Automation Engineer Practitioner</div><div class="cert-issuer">Capgemini</div></div>
+          <div class="cert-card"><div class="cert-name">Engagement Manager</div><div class="cert-issuer">Capgemini</div></div>
+          <div class="cert-card"><div class="cert-name">Connected Manager</div><div class="cert-issuer">Capgemini</div></div>
+        </div>
       </div>
-      <div class="cert-item">
-        <div class="cert-name">Automation Engineer Practitioner</div>
-        <div class="cert-issuer">Capgemini</div>
+
+      <div>
+        <div class="sec-eyebrow" style="margin-bottom:0.75rem;">Self-Initiated Badges — via Capgemini Platforms</div>
+        <div class="cert-grid" style="grid-template-columns:repeat(3,1fr);">
+          <div class="cert-card"><div class="cert-name">Azure AI Engineer Associate (AI-102)</div><div class="cert-issuer">Microsoft · Badge on LinkedIn</div></div>
+          <div class="cert-card"><div class="cert-name">Six Sigma White Belt</div><div class="cert-issuer">Udemy</div></div>
+          <div class="cert-card"><div class="cert-name">IT Security: Defense Against the Digital Dark Arts</div><div class="cert-issuer">Pluralsight / Coursera</div></div>
+        </div>
       </div>
-      <div class="cert-item">
-        <div class="cert-name">Engagement Manager</div>
-        <div class="cert-issuer">Capgemini</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-name">Six Sigma — White Belt</div>
-        <div class="cert-issuer">Udemy</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-name">Connected Manager</div>
-        <div class="cert-issuer">Capgemini</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-name">VMware vSphere 5</div>
-        <div class="cert-issuer">G.T. Enterprises</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-name">RHEL 7</div>
-        <div class="cert-issuer">New Horizon Development Centre</div>
-      </div>
+
     </div>
   </div>
 </section>
 
-<!-- ═══ ROADMAP ═══ -->
+<!-- ROADMAP -->
 <section id="roadmap">
   <div class="section-inner">
-    <div class="section-label">Growth Plan</div>
-    <h2 class="section-heading">Learning<br><em>roadmap 2026</em></h2>
-    <div class="roadmap-phases">
-
-      <div class="roadmap-phase reveal">
-        <div class="phase-info">
-          <span class="phase-tag tag-now">🔥 Now</span>
-          <div class="phase-name">Quick Wins</div>
-          <div class="phase-duration">0–3 months</div>
-        </div>
-        <div class="phase-courses">
-          <div class="course-item">
-            <div class="course-num">1</div>
-            <div class="course-text">
-              <div class="course-name">Generative AI for Business Leaders</div>
-              <div class="course-note">Enterprise AI use cases, LLMs, AI workflows — Coursera / Udemy</div>
-            </div>
-          </div>
-          <div class="course-item">
-            <div class="course-num">2</div>
-            <div class="course-text">
-              <div class="course-name">EU AI Act — Business Awareness</div>
-              <div class="course-note">France/Europe differentiator — LinkedIn Learning / Udemy</div>
-            </div>
-          </div>
-          <div class="course-item">
-            <div class="course-num">3</div>
-            <div class="course-text">
-              <div class="course-name">Prompt Engineering for Business</div>
-              <div class="course-note">Day-to-day AI productivity — Udemy / YouTube</div>
-            </div>
-          </div>
+    <div class="sec-eyebrow">Growth Plan</div>
+    <h2 class="sec-heading">Learning <em>roadmap 2026</em></h2>
+    <div class="roadmap-list">
+      <div class="roadmap-item reveal">
+        <div class="rm-phase"><span class="rm-badge">Now · 0–3 months</span><div class="rm-title">Quick Wins</div></div>
+        <div class="rm-courses">
+          <div class="rm-course"><div class="rm-num">1</div><div><div class="rm-cname">Generative AI for Business Leaders</div><div class="rm-cnote">Enterprise AI use cases, LLMs, AI workflows — Coursera / Udemy</div></div></div>
+          <div class="rm-course"><div class="rm-num">2</div><div><div class="rm-cname">EU AI Act — Business Awareness</div><div class="rm-cnote">France/Europe differentiator — LinkedIn Learning</div></div></div>
+          <div class="rm-course"><div class="rm-num">3</div><div><div class="rm-cname">Prompt Engineering for Business</div><div class="rm-cnote">Day-to-day AI productivity — Udemy</div></div></div>
         </div>
       </div>
-
-      <div class="roadmap-phase reveal">
-        <div class="phase-info">
-          <span class="phase-tag tag-mid">📈 Build</span>
-          <div class="phase-name">Strategic Credentials</div>
-          <div class="phase-duration">3–9 months</div>
-        </div>
-        <div class="phase-courses">
-          <div class="course-item">
-            <div class="course-num">4</div>
-            <div class="course-text">
-              <div class="course-name">PROSCI Change Management Certification</div>
-              <div class="course-note">Opens Transformation Manager category in Europe — PROSCI.com</div>
-            </div>
-          </div>
-          <div class="course-item">
-            <div class="course-num">5</div>
-            <div class="course-text">
-              <div class="course-name">ITIL 4 — Strategist or Specialist Module</div>
-              <div class="course-note">Director-level positioning — Axelos / PeopleCert</div>
-            </div>
-          </div>
+      <div class="roadmap-item reveal">
+        <div class="rm-phase"><span class="rm-badge">Build · 3–9 months</span><div class="rm-title">Strategic Credentials</div></div>
+        <div class="rm-courses">
+          <div class="rm-course"><div class="rm-num">4</div><div><div class="rm-cname">PROSCI Change Management Certification</div><div class="rm-cnote">Opens Transformation Manager roles in Europe</div></div></div>
+          <div class="rm-course"><div class="rm-num">5</div><div><div class="rm-cname">ITIL 4 Strategist or Specialist Module</div><div class="rm-cnote">Axelos / PeopleCert</div></div></div>
         </div>
       </div>
-
-      <div class="roadmap-phase reveal">
-        <div class="phase-info">
-          <span class="phase-tag tag-long">🎯 Long</span>
-          <div class="phase-name">Market Positioning</div>
-          <div class="phase-duration">9–18 months</div>
-        </div>
-        <div class="phase-courses">
-          <div class="course-item">
-            <div class="course-num">6</div>
-            <div class="course-text">
-              <div class="course-name">Azure AI Fundamentals (AI-900)</div>
-              <div class="course-note">Enterprise cloud vocabulary — Microsoft Learn (free)</div>
-            </div>
-          </div>
-          <div class="course-item">
-            <div class="course-num">7</div>
-            <div class="course-text">
-              <div class="course-name">French A2 → B1</div>
-              <div class="course-note">France retention and client-facing credibility — Alliance Française</div>
-            </div>
-          </div>
+      <div class="roadmap-item reveal">
+        <div class="rm-phase"><span class="rm-badge">Long · 9–18 months</span><div class="rm-title">Market Positioning</div></div>
+        <div class="rm-courses">
+          <div class="rm-course"><div class="rm-num">6</div><div><div class="rm-cname">Azure AI Fundamentals (AI-900)</div><div class="rm-cnote">Microsoft Learn — free</div></div></div>
+          <div class="rm-course"><div class="rm-num">7</div><div><div class="rm-cname">French A2 → B1</div><div class="rm-cnote">Alliance Française · France retention lever</div></div></div>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- ═══ CONTACT ═══ -->
+<!-- CONTACT -->
 <section id="contact">
   <div class="contact-inner">
-    <div class="contact-pre">Let's connect</div>
-    <h2 class="contact-heading">Ready to<br><em>deliver together?</em></h2>
-    <p class="contact-sub">I'm open to senior opportunities in Delivery, Transformation, and AI-Enabled Operations within international organisations in Europe. Based in France, available immediately, English-first.</p>
-    <div class="contact-links">
-      <a href="mailto:amitmesah@gmail.com" class="contact-link primary">Email Me</a>
-      <a href="https://linkedin.com/in/amitmesah" target="_blank" class="contact-link">LinkedIn</a>
-      <a href="Amit_Sah_CV.pdf" download class="contact-link">Download CV</a>
+    <div class="contact-pre">Get in touch</div>
+    <h2 class="contact-h">Open to the right <em>opportunity</em></h2>
+    <p class="contact-sub">Looking for senior roles in Delivery, Transformation, and AI-Enabled Operations within international organisations in Europe. Based in France, available immediately, English-first interviews.</p>
+    <div class="contact-btns">
+      <a href="mailto:amitmesah@gmail.com" class="cbtn primary">Email Me</a>
+      <a href="https://linkedin.com/in/amitmesah" target="_blank" class="cbtn">LinkedIn</a>
+      <a href="Amit_Sah_CV.pdf" download class="cbtn">Download CV</a>
     </div>
   </div>
 </section>
 
-<!-- ═══ FOOTER ═══ -->
 <footer>
   <span class="footer-name">Amit Sah</span>
   <span class="footer-copy">© 2026 · amitmesah.github.io</span>
 </footer>
 
 <script>
-// Custom cursor
-const cursor = document.getElementById('cursor');
-const ring = document.getElementById('cursorRing');
-let mx = 0, my = 0, rx = 0, ry = 0;
-
-document.addEventListener('mousemove', e => {
-  mx = e.clientX; my = e.clientY;
-  cursor.style.left = mx + 'px';
-  cursor.style.top  = my + 'px';
-});
-
-function animateRing() {
-  rx += (mx - rx) * 0.12;
-  ry += (my - ry) * 0.12;
-  ring.style.left = rx + 'px';
-  ring.style.top  = ry + 'px';
-  requestAnimationFrame(animateRing);
-}
-animateRing();
-
-document.querySelectorAll('a, button').forEach(el => {
-  el.addEventListener('mouseenter', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(2.5)';
-    ring.style.width = '60px'; ring.style.height = '60px';
-    ring.style.opacity = '0.4';
-  });
-  el.addEventListener('mouseleave', () => {
-    cursor.style.transform = 'translate(-50%,-50%) scale(1)';
-    ring.style.width = '36px'; ring.style.height = '36px';
-    ring.style.opacity = '1';
-  });
-});
-
-// Scroll reveal
 const observer = new IntersectionObserver(entries => {
-  entries.forEach((entry, i) => {
-    if (entry.isIntersecting) {
-      setTimeout(() => entry.target.classList.add('visible'), i * 80);
-    }
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80);
   });
-}, { threshold: 0.12 });
-
+}, { threshold: 0.1 });
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// Active nav highlight
-const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
-  let current = '';
-  sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.id;
+  let cur = '';
+  document.querySelectorAll('section[id]').forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) cur = s.id;
   });
-  navLinks.forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current
-      ? 'var(--gold)' : '';
-  });
+  navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--blue2)' : ''; });
 });
 </script>
 </body>
