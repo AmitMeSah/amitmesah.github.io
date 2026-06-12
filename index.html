@@ -1,273 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amit Sah — Delivery & Transformation Manager</title>
-<meta name="description" content="Delivery and Transformation Manager with 19 years in IT. Automation, AI-Enabled Operations, EU AI Act. Based in France.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Delivery and Transformation Manager with 19 years in IT. Automation, AI-Enabled Operations, EU AI Act. Based in France." />
+  <title>Amit Sah — Delivery &amp; Transformation Manager</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root {
-  --navy:    #070d1a;
-  --navy2:   #0d1528;
-  --blue:    #3b82f6;
-  --blue2:   #60a5fa;
-  --blue3:   #93c5fd;
-  --white:   #ffffff;
-  --offwhite:#f0f5ff;
-  --text:    #cbd5e1;
-  --text2:   #94a3b8;
-  --text3:   #475569;
-  --border:  rgba(59,130,246,0.15);
-  --card:    rgba(59,130,246,0.04);
-}
+    :root {
+      --bg: #0d0d0d;
+      --surface: #161616;
+      --surface2: #1e1e1e;
+      --border: #2a2a2a;
+      --accent: #4f8ef7;
+      --accent2: #a78bfa;
+      --text: #e8e8e8;
+      --muted: #888;
+      --white: #fff;
+      --radius: 12px;
+      --gap: 2rem;
+    }
 
-html { scroll-behavior: smooth; }
-body { font-family: 'Inter', sans-serif; background: var(--navy); color: var(--text); overflow-x: hidden; }
+    html { scroll-behavior: smooth; }
 
-/* NAV */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
-  padding: 1.2rem 5%;
-  display: flex; justify-content: space-between; align-items: center;
-  background: rgba(7,13,26,0.92);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-}
-.nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.3rem; color: var(--blue2); text-decoration: none; }
-.nav-links { display: flex; gap: 2rem; list-style: none; }
-.nav-links a { font-size: 0.8rem; font-weight: 500; letter-spacing: 0.05em; color: var(--text2); text-decoration: none; transition: color 0.2s; }
-.nav-links a:hover { color: var(--blue2); }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
 
-/* HERO */
-#hero {
-  min-height: 100vh;
-  display: flex; flex-direction: column; justify-content: center;
-  padding: 8rem 5% 5rem;
-  position: relative;
-}
-.hero-line {
-  width: 40px; height: 2px;
-  background: var(--blue);
-  margin-bottom: 1.5rem;
-}
-.hero-name {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(3rem, 8vw, 7rem);
-  font-weight: 400; line-height: 1;
-  color: var(--white);
-  margin-bottom: 0.75rem;
-}
-.hero-name span { color: var(--blue2); font-style: italic; }
-.hero-role {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  font-weight: 300; color: var(--text2);
-  margin-bottom: 2rem; line-height: 1.5;
-  max-width: 600px;
-}
-.hero-tags { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2.5rem; }
-.tag {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.68rem; letter-spacing: 0.1em;
-  padding: 0.35rem 0.9rem;
-  border: 1px solid var(--border);
-  color: var(--blue3);
-  background: var(--card);
-}
-.hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
-.btn {
-  font-size: 0.8rem; font-weight: 600; letter-spacing: 0.08em;
-  padding: 0.85rem 2rem; text-decoration: none;
-  transition: transform 0.2s, background 0.2s;
-}
-.btn:hover { transform: translateY(-2px); }
-.btn-blue { background: var(--blue); color: white; }
-.btn-blue:hover { background: var(--blue2); }
-.btn-outline { border: 1px solid var(--border); color: var(--text2); }
-.btn-outline:hover { border-color: var(--blue2); color: var(--blue2); }
+    /* NAV */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(13,13,13,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 56px;
+    }
 
-.hero-stats {
-  position: absolute; right: 5%; bottom: 5%;
-  display: flex; flex-direction: column; gap: 1.5rem; text-align: right;
-}
-.stat-n { font-family: 'DM Serif Display', serif; font-size: 2.8rem; color: var(--blue2); line-height: 1; }
-.stat-l { font-family: 'DM Mono', monospace; font-size: 0.6rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--text3); margin-top: 0.2rem; }
+    nav .logo {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--white);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
 
-/* SECTIONS */
-.section { position: relative; }
-.section-inner { max-width: 1060px; margin: 0 auto; padding: 5.5rem 5%; }
-.sec-eyebrow {
-  font-family: 'DM Mono', monospace; font-size: 0.68rem;
-  letter-spacing: 0.2em; text-transform: uppercase;
-  color: var(--blue); margin-bottom: 0.75rem;
-  display: flex; align-items: center; gap: 0.75rem;
-}
-.sec-eyebrow::before { content: ''; width: 24px; height: 1px; background: var(--blue); }
-.sec-heading {
-  font-family: 'DM Serif Display', serif;
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 400; color: var(--white);
-  margin-bottom: 2.5rem; line-height: 1.15;
-}
-.sec-heading em { font-style: italic; color: var(--blue2); }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
 
-/* ABOUT */
-#about { background: var(--navy2); }
-.about-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: start; }
-.about-text p {
-  font-size: 1rem; font-weight: 300; line-height: 1.8;
-  color: var(--text); margin-bottom: 1.25rem;
-}
-.about-text p strong { color: var(--white); font-weight: 600; }
-.about-cards { display: flex; flex-direction: column; gap: 1rem; }
-.info-card {
-  padding: 1.1rem 1.25rem;
-  border: 1px solid var(--border);
-  background: var(--card);
-}
-.info-label { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--blue); margin-bottom: 0.35rem; }
-.info-val { font-size: 0.88rem; color: var(--text); line-height: 1.5; }
+    nav ul a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
 
-/* EXPERIENCE */
-#experience { background: var(--navy); }
-.exp-company-block { margin-bottom: 2.5rem; }
-.exp-company-header {
-  display: flex; align-items: baseline; gap: 1rem;
-  padding: 0.75rem 1.25rem;
-  background: rgba(59,130,246,0.06);
-  border-left: 3px solid var(--blue);
-  margin-bottom: 1rem;
-}
-.exp-company-name { font-size: 0.92rem; font-weight: 700; color: var(--white); }
-.exp-company-sub { font-family: 'DM Mono', monospace; font-size: 0.68rem; color: var(--text2); letter-spacing: 0.05em; }
+    nav ul a:hover { color: var(--white); }
 
-.exp-phase {
-  display: grid; grid-template-columns: 180px 1fr;
-  gap: 1.5rem; padding: 1.25rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.04);
-}
-.exp-phase:last-child { border-bottom: none; }
-.exp-period { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--blue2); line-height: 1.4; }
-.exp-role-title { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 0.75rem; }
-.exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
-.exp-bullets li { font-size: 0.87rem; color: var(--text); line-height: 1.6; padding-left: 1.1rem; position: relative; }
-.exp-bullets li::before { content: '—'; position: absolute; left: 0; color: var(--blue); opacity: 0.6; }
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 7rem 2rem 4rem;
+      max-width: 960px;
+      margin: 0 auto;
+    }
 
-/* SKILLS */
-#skills { background: var(--navy2); }
-.skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.skill-card {
-  padding: 1.5rem; border: 1px solid var(--border);
-  background: var(--card); transition: border-color 0.3s, transform 0.3s;
-}
-.skill-card:hover { border-color: var(--blue2); transform: translateY(-3px); }
-.skill-icon { font-size: 1.5rem; margin-bottom: 0.75rem; }
-.skill-name { font-size: 0.88rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
-.skill-desc { font-size: 0.78rem; color: var(--text2); line-height: 1.6; }
+    .hero-eyebrow {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
 
-/* ACHIEVEMENTS */
-#achievements { background: var(--navy); }
-.ach-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
-.ach-card { padding: 2rem; border: 1px solid var(--border); background: var(--card); transition: transform 0.3s; }
-.ach-card:hover { transform: translateY(-3px); }
-.ach-num { font-family: 'DM Serif Display', serif; font-size: 3rem; color: var(--blue2); line-height: 1; margin-bottom: 0.5rem; }
-.ach-title { font-size: 0.92rem; font-weight: 700; color: var(--white); margin-bottom: 0.4rem; }
-.ach-desc { font-size: 0.82rem; color: var(--text2); line-height: 1.6; }
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
 
-/* CERTS */
-#certifications { background: var(--navy2); }
-.cert-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.85rem; }
-.cert-card { padding: 1.1rem 1.25rem; border: 1px solid var(--border); background: var(--card); transition: border-color 0.2s; }
-.cert-card:hover { border-color: var(--blue2); }
-.cert-name { font-size: 0.85rem; font-weight: 600; color: var(--white); margin-bottom: 0.25rem; line-height: 1.3; }
-.cert-issuer { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--blue); letter-spacing: 0.08em; }
+    h1 em { font-style: normal; color: var(--accent); }
 
-/* ROADMAP */
-#roadmap { background: var(--navy); }
-.roadmap-list { display: flex; flex-direction: column; gap: 1rem; }
-.roadmap-item {
-  display: grid; grid-template-columns: 160px 1fr;
-  gap: 2rem; align-items: start;
-  padding: 1.5rem; border: 1px solid var(--border);
-  background: var(--card); transition: border-color 0.3s;
-}
-.roadmap-item:hover { border-color: var(--blue2); }
-.rm-phase { }
-.rm-badge {
-  font-family: 'DM Mono', monospace; font-size: 0.62rem;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 0.25rem 0.6rem; display: inline-block; margin-bottom: 0.5rem;
-  border: 1px solid var(--border); color: var(--blue3);
-}
-.rm-title { font-size: 0.88rem; font-weight: 700; color: var(--white); margin-bottom: 0.2rem; }
-.rm-duration { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--text3); }
-.rm-courses { display: flex; flex-direction: column; gap: 0.6rem; }
-.rm-course { display: flex; gap: 0.75rem; align-items: flex-start; }
-.rm-num {
-  width: 20px; height: 20px; background: var(--blue); color: white;
-  font-size: 0.65rem; font-weight: 700; font-family: 'DM Mono', monospace;
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
-}
-.rm-cname { font-size: 0.85rem; font-weight: 600; color: var(--white); }
-.rm-cnote { font-size: 0.75rem; color: var(--text2); margin-top: 0.1rem; }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--muted);
+      max-width: 580px;
+      margin-bottom: 2.5rem;
+    }
 
-/* CONTACT */
-#contact { background: var(--navy2); text-align: center; }
-.contact-inner { max-width: 620px; margin: 0 auto; padding: 6rem 5%; }
-.contact-pre { font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 1rem; }
-.contact-h { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 5vw, 3.5rem); color: var(--white); line-height: 1.15; margin-bottom: 1rem; }
-.contact-h em { color: var(--blue2); font-style: italic; }
-.contact-sub { font-size: 0.95rem; font-weight: 300; color: var(--text2); line-height: 1.7; margin-bottom: 2.5rem; }
-.contact-btns { display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; }
-.cbtn {
-  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em;
-  padding: 0.85rem 1.75rem; text-decoration: none;
-  border: 1px solid var(--border); color: var(--text2);
-  transition: border-color 0.2s, color 0.2s, transform 0.2s;
-}
-.cbtn:hover { border-color: var(--blue2); color: var(--blue2); transform: translateY(-2px); }
-.cbtn.primary { background: var(--blue); color: white; border-color: var(--blue); }
-.cbtn.primary:hover { background: var(--blue2); border-color: var(--blue2); }
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 2.5rem;
+    }
 
-/* FOOTER */
-footer {
-  background: var(--navy); padding: 1.5rem 5%;
-  display: flex; justify-content: space-between; align-items: center;
-  border-top: 1px solid var(--border);
-}
-.footer-name { font-family: 'DM Serif Display', serif; font-size: 1rem; color: var(--blue2); }
-.footer-copy { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.1em; color: var(--text3); }
+    .tag {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      font-size: 0.8rem;
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+    }
 
-/* REVEAL */
-.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease, transform 0.6s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
+    .hero-stats {
+      display: flex;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
 
-/* RESPONSIVE */
-@media (max-width: 860px) {
-  .nav-links { display: none; }
-  .hero-stats { position: static; flex-direction: row; flex-wrap: wrap; margin-top: 2.5rem; }
-  .stat-item { text-align: left; }
-  .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-  .skills-grid { grid-template-columns: 1fr 1fr; }
-  .ach-grid { grid-template-columns: 1fr; }
-  .cert-grid { grid-template-columns: 1fr 1fr; }
-  .exp-phase { grid-template-columns: 1fr; gap: 0.5rem; }
-  .roadmap-item { grid-template-columns: 1fr; gap: 1rem; }
-}
-@media (max-width: 560px) {
-  .skills-grid, .cert-grid { grid-template-columns: 1fr; }
-  .hero-btns { flex-direction: column; }
-}
-</style>
+    .stat-num {
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1;
+    }
+
+    .stat-label {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #fff;
+    }
+
+    .btn-primary:hover { background: #3a7ae8; }
+
+    .btn-ghost {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* SECTIONS */
+    section {
+      padding: 5rem 2rem;
+      max-width: 960px;
+      margin: 0 auto;
+      border-top: 1px solid var(--border);
+    }
+
+    .section-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    h2 {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 2.5rem;
+    }
+
+    h2 em { font-style: normal; color: var(--accent2); }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .about-bio {
+      grid-column: 1 / -1;
+      font-size: 1.05rem;
+      color: var(--text);
+      max-width: 700px;
+    }
+
+    .about-bio strong { color: var(--white); }
+
+    .about-cards {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .about-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+    }
+
+    .about-card-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+
+    .about-card-value {
+      font-size: 0.9rem;
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    /* EXPERIENCE */
+    .employer-block {
+      margin-bottom: 3rem;
+    }
+
+    .employer-header {
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .employer-name {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .employer-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    .role-block {
+      margin-bottom: 2rem;
+      padding-left: 1.25rem;
+      border-left: 2px solid var(--border);
+    }
+
+    .role-block:hover { border-left-color: var(--accent); }
+
+    .role-period {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.3rem;
+    }
+
+    .role-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.75rem;
+    }
+
+    .role-block ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .role-block ul li {
+      font-size: 0.9rem;
+      color: var(--text);
+      padding-left: 1rem;
+      position: relative;
+    }
+
+    .role-block ul li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-size: 0.75rem;
+      top: 0.15rem;
+    }
+
+    /* SKILLS */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skill-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+
+    .skill-card:hover { border-color: var(--accent2); }
+
+    .skill-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .skill-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+
+    .skill-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* ACHIEVEMENTS */
+    .achievements-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .achievement-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.75rem 1.5rem;
+      text-align: center;
+    }
+
+    .achievement-num {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: var(--accent);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .achievement-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 0.4rem;
+    }
+
+    .achievement-desc {
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* CERTIFICATIONS */
+    .cert-group { margin-bottom: 2rem; }
+
+    .cert-group-label {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .cert-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .cert-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 1rem;
+    }
+
+    .cert-name {
+      font-size: 0.9rem;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .cert-issuer {
+      font-size: 0.78rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* ROADMAP */
+    .roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .roadmap-phase {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .roadmap-phase-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 0.4rem;
+    }
+
+    .roadmap-phase-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 1rem;
+    }
+
+    .roadmap-items {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .roadmap-item {
+      display: flex;
+      gap: 0.75rem;
+      align-items: flex-start;
+    }
+
+    .roadmap-num {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 700;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    .roadmap-text { font-size: 0.85rem; color: var(--text); }
+    .roadmap-text strong { color: var(--white); display: block; }
+
+    /* CONTACT */
+    #contact {
+      text-align: center;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 640px) {
+      nav ul { display: none; }
+      .about-grid { grid-template-columns: 1fr; }
+      .hero-stats { gap: 1.5rem; }
+    }
+  </style>
 </head>
 <body>
 
 <nav>
-  <a href="#hero" class="nav-logo">Amit Sah</a>
-  <ul class="nav-links">
+  <a class="logo" href="#hero">Amit Sah</a>
+  <ul>
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#skills">Skills</a></li>
@@ -279,69 +535,71 @@ footer {
 </nav>
 
 <!-- HERO -->
-<section id="hero">
-  <div class="hero-line"></div>
-  <h1 class="hero-name">Amit <span>Sah</span></h1>
-  <p class="hero-role">Delivery & Transformation Manager &nbsp;·&nbsp; Automation Leadership &nbsp;·&nbsp; AI-Enabled Operations</p>
+<div id="hero">
+  <p class="hero-eyebrow">Available for senior roles in Europe</p>
+  <h1>Amit <em>Sah</em></h1>
+  <p class="hero-sub">Delivery &amp; Transformation Manager · Automation Leadership · AI-Enabled Operations</p>
   <div class="hero-tags">
     <span class="tag">19 Years in IT</span>
     <span class="tag">Based in France</span>
-    <span class="tag">EU AI Act & Governance</span>
+    <span class="tag">EU AI Act &amp; Governance</span>
     <span class="tag">Enterprise Delivery</span>
     <span class="tag">Automation</span>
   </div>
-  <div class="hero-btns">
-    <a href="#contact" class="btn btn-blue">Get In Touch</a>
-    <a href="Amit_Sah_CV.pdf" download class="btn btn-outline">Download CV</a>
-  </div>
   <div class="hero-stats">
     <div>
-      <div class="stat-n">19</div>
-      <div class="stat-l">Years in IT</div>
+      <div class="stat-num">19</div>
+      <div class="stat-label">Years in IT</div>
     </div>
     <div>
-      <div class="stat-n">50+</div>
-      <div class="stat-l">Deals Led</div>
+      <div class="stat-num">50+</div>
+      <div class="stat-label">Deals Led</div>
     </div>
     <div>
-      <div class="stat-n">$149M</div>
-      <div class="stat-l">Largest Deal</div>
+      <div class="stat-num">$149M</div>
+      <div class="stat-label">Largest Deal</div>
+    </div>
+    <div>
+      <div class="stat-num">9</div>
+      <div class="stat-label">Accounts Managed</div>
     </div>
   </div>
-</section>
+  <div class="hero-cta">
+    <a class="btn btn-primary" href="#contact">Get In Touch</a>
+    <a class="btn btn-ghost" href="https://amitmesah.github.io/Amit_Sah_CV.pdf" target="_blank">Download CV</a>
+  </div>
+</div>
 
 <!-- ABOUT -->
 <section id="about">
-  <div class="section-inner">
-    <div class="sec-eyebrow">About</div>
-    <h2 class="sec-heading">Who I <em>am</em></h2>
-    <div class="about-grid reveal">
-      <div class="about-text">
-        <p>I've spent <strong>19 years working in IT delivery, automation, and transformation</strong> — leading teams, onboarding clients, and making sure complex programmes actually land. Most of my work sits between technology and the people who need to use it.</p>
-        <p>I've worked across client onboarding, service delivery, and automation programmes in complex, multi-country environments where things are rarely straightforward. Currently based in <strong>France</strong>, working with European enterprise clients as part of Capgemini's onsite team.</p>
-        <p>I'm comfortable working across geographies, cultures, and technology domains — and have spent much of my career navigating the gap between what a client expects and what a delivery team can actually do.</p>
+  <p class="section-label">About</p>
+  <h2>Who I <em>am</em></h2>
+  <div class="about-grid">
+    <p class="about-bio">
+      I've spent <strong>19 years working in IT delivery, automation, and transformation</strong> — leading teams, onboarding clients, and making sure complex programmes actually land. Most of my work sits between technology and the people who need to use it.<br><br>
+      I've worked across client onboarding, service delivery, and automation programmes in complex, multi-country environments where things are rarely straightforward. Currently based in <strong>France</strong>, working with European enterprise clients as part of Capgemini's onsite team.<br><br>
+      I'm comfortable working across geographies, cultures, and technology domains — and have spent much of my career navigating the gap between what a client expects and what a delivery team can actually do.
+    </p>
+    <div class="about-cards">
+      <div class="about-card">
+        <div class="about-card-label">Location</div>
+        <div class="about-card-value">France (onsite) · European Timezone</div>
       </div>
-      <div class="about-cards">
-        <div class="info-card">
-          <div class="info-label">Location</div>
-          <div class="info-val">France (onsite) · European Timezone</div>
-        </div>
-        <div class="info-card">
-          <div class="info-label">Current Role</div>
-          <div class="info-val">Transversal Delivery Lead · Capgemini</div>
-        </div>
-        <div class="info-card">
-          <div class="info-label">Languages</div>
-          <div class="info-val">English (Fluent) · Hindi (Native) · French A2 · Kumaoni</div>
-        </div>
-        <div class="info-card">
-          <div class="info-label">Looking For</div>
-          <div class="info-val">Senior roles in Delivery, Transformation & AI-Enabled Operations in Europe</div>
-        </div>
-        <div class="info-card">
-          <div class="info-label">Contact</div>
-          <div class="info-val">amitmesah@gmail.com</div>
-        </div>
+      <div class="about-card">
+        <div class="about-card-label">Current Role</div>
+        <div class="about-card-value">Transversal Delivery Lead · Capgemini</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-label">Languages</div>
+        <div class="about-card-value">English (Fluent) · Hindi (Native) · French A2 · Kumaoni</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-label">Looking For</div>
+        <div class="about-card-value">Senior roles in Delivery, Transformation &amp; AI-Enabled Operations in Europe</div>
+      </div>
+      <div class="about-card">
+        <div class="about-card-label">Contact</div>
+        <div class="about-card-value">amitmesah@gmail.com</div>
       </div>
     </div>
   </div>
@@ -349,258 +607,345 @@ footer {
 
 <!-- EXPERIENCE -->
 <section id="experience">
-  <div class="section-inner">
-    <div class="sec-eyebrow">Career</div>
-    <h2 class="sec-heading">19 years of <em>enterprise delivery</em></h2>
+  <p class="section-label">Career</p>
+  <h2>19 years of <em>enterprise delivery</em></h2>
 
-    <!-- Capgemini France -->
-    <div class="exp-company-block reveal">
-      <div class="exp-company-header">
-        <span class="exp-company-name">Capgemini Technology Services — France (Onsite)</span>
-        <span class="exp-company-sub">Jan 2023 – Present · Progressive roles across a global luxury goods manufacturer and French automation practice</span>
-      </div>
-
-      <div class="exp-phase">
-        <div class="exp-period">Jan 2026 – Present<br><br>Oct 2025 – Dec 2025</div>
-        <div>
-          <div class="exp-role-title">Transversal Delivery Lead + Network Team (from Jan 2026) — a Global Luxury Goods Manufacturer</div>
-          <ul class="exp-bullets">
-            <li>Cross-functional leadership spanning automation delivery and network operations across all technology towers — 5 onshore + 4 offshore resources.</li>
-            <li>Driving Service Improvement Plans and strategic initiatives directly assigned by senior management, with no single-technology constraint.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-phase">
-        <div class="exp-period">Oct 2023 – Sep 2025</div>
-        <div>
-          <div class="exp-role-title">Automation Tools Lead — Cognitive & Robotics (C&R) Practice</div>
-          <ul class="exp-bullets">
-            <li>SPOC between 9 enterprise client accounts and Capgemini's French and Indian automation teams — qualifying, routing, and progressing automation use cases end-to-end.</li>
-            <li>As France region TIO Business Partner, coordinated Capgemini's global AIOps initiative across the region — recognised by Capgemini CIS Infrastructure Services CEO for these contributions.</li>
-            <li>Coordinated a GenAI proof-of-concept for LVMH — managing the interface between Capgemini's development team and LVMH delivery stakeholders for a document processing use case, including multiple rounds of workshops with client management.</li>
-            <li>Participated in presales engagements for Air France and CCF Bank — contributing to solution design and client-facing presentations.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-phase">
-        <div class="exp-period">Jan 2023 – Sep 2023</div>
-        <div>
-          <div class="exp-role-title">Application Domain Manager & Automation Lead — a Global Luxury Goods Manufacturer</div>
-          <ul class="exp-bullets">
-            <li>Relocated to France; managed two India-based delivery teams — OPCON (batch scheduling) and Middleware — ensuring SLA adherence from day one.</li>
-            <li>Maintained parallel automation leadership responsibilities alongside ADM duties.</li>
-          </ul>
-        </div>
-      </div>
+  <!-- Capgemini France -->
+  <div class="employer-block">
+    <div class="employer-header">
+      <div class="employer-name">Capgemini Technology Services — France (Onsite)</div>
+      <div class="employer-meta">Jan 2023 – Present · Progressive roles across a global luxury goods manufacturer and French automation practice</div>
     </div>
 
-    <!-- Capgemini India -->
-    <div class="exp-company-block reveal">
-      <div class="exp-company-header">
-        <span class="exp-company-name">Capgemini Technology Services — India</span>
-        <span class="exp-company-sub">Jun 2017 – Jan 2023 · Mumbai (2017–2018) · Pune (2018–2023) · Progressive roles across delivery, automation and onboarding</span>
-      </div>
-
-      <div class="exp-phase">
-        <div class="exp-period">Jan 2021 – Jan 2023</div>
-        <div>
-          <div class="exp-role-title">Automation Lead — a Global Luxury Goods Manufacturer</div>
-          <ul class="exp-bullets">
-            <li>Solely responsible for automation leadership on the a global luxury goods manufacturer — identifying use cases, managing automation delivery, and handling transversal issues across the account.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-phase">
-        <div class="exp-period">Jul 2020 – Jan 2021</div>
-        <div>
-          <div class="exp-role-title">Delivery Team Lead — a Global Luxury Goods Manufacturer</div>
-          <ul class="exp-bullets">
-            <li>Led a team of 18 resources across Windows, Linux, Citrix, MSSQL, Oracle, and SharePoint platform towers.</li>
-            <li>From Jan 2021, took on additional Automation Lead responsibilities until a replacement was onboarded mid-2021.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-phase">
-        <div class="exp-period">Sep 2018 – Jun 2020</div>
-        <div>
-          <div class="exp-role-title">Regional Automation Lead — South Europe</div>
-          <ul class="exp-bullets">
-            <li>Worked across South Europe delivery accounts — reviewing tickets, identifying automation use cases, and coordinating with the dedicated automation team to ensure use cases were properly scoped and delivered.</li>
-            <li>Frequently had to make the case for automation where delivery teams were resistant — building the argument that a process qualified as a viable use case and following it through.</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="exp-phase">
-        <div class="exp-period">Jun 2017 – Aug 2018</div>
-        <div>
-          <div class="exp-role-title">Onboarding Manager</div>
-          <ul class="exp-bullets">
-            <li>Onboarded 50+ clients onto Capgemini's Tools and Automation platform — defining transition plans, timelines, risk assessments, and methodologies across banking, aviation, cruise/shipping, railway, chemical, and fashion industries. Individual deal values up to USD 149M.</li>
-            </ul>
-        </div>
-      </div>
+    <div class="role-block">
+      <div class="role-period">Oct 2025 – Present</div>
+      <div class="role-title">Transversal Delivery Lead</div>
+      <ul>
+        <li>Cross-functional leadership spanning automation delivery and, from Jan 2026, firewall operations — 5 onshore + 4 offshore resources across technology towers.</li>
+        <li>Leading integration of Red Hat Ansible Automation Platform (AAP) with ServiceNow — including a ServiceNow-based service referencing CMDB/CI data, enabling AAP to execute both Windows and Linux automation use cases and resolving a Windows execution constraint where WinRM was not permitted.</li>
+        <li>Delivered SQL query automation on the account; scoping auto-ticketing (pending Dynatrace rollout) and alert fine-tuning on the ServiceNav monitoring platform.</li>
+        <li>Driving a task force for the onshore firewall team — reducing ticket backlog, dependencies, access gaps, and onboarding time.</li>
+        <li>Driving Service Improvement Plans and strategic initiatives directly assigned by senior management.</li>
+      </ul>
     </div>
 
-    <!-- Tech Mahindra -->
-    <div class="exp-company-block reveal">
-      <div class="exp-company-header">
-        <span class="exp-company-name">Tech Mahindra</span>
-        <span class="exp-company-sub">Sep 2014 – Mar 2017 · Pune</span>
-      </div>
-      <div class="exp-phase">
-        <div class="exp-period">Sep 2014 – Mar 2017</div>
-        <div>
-          <div class="exp-role-title">Solution Lead</div>
-          <ul class="exp-bullets">
-            <li>Led end-to-end resolution of a critical HP SIM platform issue — delivered a fully compliant environment from assessment to sign-off, managing scope, timelines, risk, and daily client communication.</li>
-          </ul>
-        </div>
-      </div>
+    <div class="role-block">
+      <div class="role-period">Oct 2023 – Sep 2025</div>
+      <div class="role-title">Automation Tools Lead — Cognitive &amp; Robotics (C&amp;R) Practice</div>
+      <ul>
+        <li>SPOC between 9 enterprise client accounts and Capgemini's French and Indian automation delivery teams — qualifying, routing, and progressing automation use cases end-to-end.</li>
+        <li>As France region TIO Business Partner, coordinated Capgemini's global AIOps initiative across the region — recognised by the Capgemini CIS Infrastructure Services CEO for these contributions.</li>
+        <li>Coordinated a GenAI proof-of-concept for LVMH — managing the interface between Capgemini's development team and client stakeholders for a document processing use case, including multiple rounds of workshops with client management.</li>
+        <li>Participated in presales engagements for Air France and CCF Bank — contributing to solution design and client-facing presentations.</li>
+      </ul>
     </div>
 
-    <!-- HP -->
-    <div class="exp-company-block reveal">
-      <div class="exp-company-header">
-        <span class="exp-company-name">Hewlett Packard Enterprise</span>
-        <span class="exp-company-sub">Nov 2011 – Aug 2014 · Bengaluru</span>
-      </div>
-      <div class="exp-phase">
-        <div class="exp-period">Nov 2011 – Aug 2014</div>
-        <div>
-          <div class="exp-role-title">Technical Solution Consultant</div>
-          <ul class="exp-bullets">
-            <li>HP SIM technical support including remote infrastructure builds from scratch. Awarded Certificate of Excellence for two consecutive quarters (H2 2013).</li>
-          </ul>
-        </div>
-      </div>
+    <div class="role-block">
+      <div class="role-period">Jan 2023 – Sep 2023</div>
+      <div class="role-title">Application Domain Manager &amp; Automation Lead</div>
+      <ul>
+        <li>Relocated to France; took ownership of the ADM role covering two India-based delivery teams — OPCON (batch scheduling) and Middleware — ensuring SLA adherence from day one.</li>
+        <li>Maintained parallel automation leadership responsibilities alongside ADM duties.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Capgemini India -->
+  <div class="employer-block">
+    <div class="employer-header">
+      <div class="employer-name">Capgemini Technology Services — India</div>
+      <div class="employer-meta">Jun 2017 – Jan 2023 · Mumbai (2017–2018) · Pune (2018–2023) · Final two roles delivered for the same luxury goods client</div>
     </div>
 
-    <!-- Earlier -->
-    <div class="exp-company-block reveal">
-      <div class="exp-company-header">
-        <span class="exp-company-name">Earlier — Data Centre & Field Operations</span>
-        <span class="exp-company-sub">Renovision · Wipro Infotech · PCS Technology · 2007–2011</span>
-      </div>
-      <div class="exp-phase">
-        <div class="exp-period">2007 – 2011</div>
-        <div>
-          <div class="exp-role-title">Operations & Field Engineering</div>
-          <ul class="exp-bullets">
-            <li>Managed 30+ enterprise clients at Bharti Airtel Data Centre; server/network hardware support and IBM AIX (P-series) administration.</li>
-          </ul>
-        </div>
-      </div>
+    <div class="role-block">
+      <div class="role-period">Jan 2021 – Jan 2023</div>
+      <div class="role-title">Automation Lead — a Global Luxury Goods Manufacturer</div>
+      <ul>
+        <li>Solely responsible for automation leadership on the account — identifying use cases, managing automation delivery, and handling transversal issues.</li>
+        <li>Drove delivery of an automation portfolio spanning 2022–2023, including 72 network use cases (e.g., F5 reboot and upgrade), Linux disk auto-heal, and automated file-system mounting.</li>
+      </ul>
     </div>
 
+    <div class="role-block">
+      <div class="role-period">Jul 2020 – Jan 2021</div>
+      <div class="role-title">Delivery Team Lead — a Global Luxury Goods Manufacturer</div>
+      <ul>
+        <li>Led a team of 18 resources across Windows, Linux, Citrix, MSSQL, Oracle, and SharePoint platform towers.</li>
+        <li>From Jan 2021, transitioned into the Automation Lead role, handing over team lead duties once a successor was onboarded by mid-2021.</li>
+      </ul>
+    </div>
+
+    <div class="role-block">
+      <div class="role-period">Sep 2018 – Jun 2020</div>
+      <div class="role-title">Regional Automation Lead — South Europe</div>
+      <ul>
+        <li>Reviewed tickets and identified automation use cases across South Europe delivery accounts, coordinating with the dedicated automation team to ensure use cases were properly scoped and delivered.</li>
+        <li>Built the case for automation where delivery teams were resistant — persuading stakeholders that processes qualified as viable use cases and following them through to delivery.</li>
+      </ul>
+    </div>
+
+    <div class="role-block">
+      <div class="role-period">Jun 2017 – Aug 2018</div>
+      <div class="role-title">Onboarding Manager</div>
+      <ul>
+        <li>Onboarded 50+ clients onto Capgemini's Tools and Automation platform — defining transition plans, timelines, risk assessments, and methodologies across banking, aviation, cruise/shipping, railway, chemical, and fashion industries.</li>
+        <li>Individual deal values up to USD 149M.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Tech Mahindra -->
+  <div class="employer-block">
+    <div class="employer-header">
+      <div class="employer-name">Tech Mahindra Ltd.</div>
+      <div class="employer-meta">Sep 2014 – Mar 2017 · Pune</div>
+    </div>
+
+    <div class="role-block">
+      <div class="role-period">Sep 2014 – Mar 2017</div>
+      <div class="role-title">Solution Lead</div>
+      <ul>
+        <li>Led end-to-end resolution of a critical HP SIM platform issue — delivered a fully compliant environment from assessment to sign-off, managing scope, timelines, risk, and daily client communication.</li>
+        <li>Supported monitoring and ITSM tooling across the engagement — HP SiteScope, HP NNMi, OMW, Asset Manager, and MS SCOM — preparing design documents and securing client sign-off.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- HPE -->
+  <div class="employer-block">
+    <div class="employer-header">
+      <div class="employer-name">Hewlett Packard Enterprise</div>
+      <div class="employer-meta">Nov 2011 – Aug 2014 · Bengaluru</div>
+    </div>
+
+    <div class="role-block">
+      <div class="role-period">Nov 2011 – Aug 2014</div>
+      <div class="role-title">Technical Solution Consultant</div>
+      <ul>
+        <li>Delivered HP SIM technical support including remote infrastructure builds from scratch; collaborated with the Tower Head and R&amp;D teams on recurring platform issues.</li>
+        <li>Awarded Certificate of Excellence for two consecutive quarters (H2 2013).</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Earlier -->
+  <div class="employer-block">
+    <div class="employer-header">
+      <div class="employer-name">Earlier Roles — Data Centre &amp; Field Operations</div>
+      <div class="employer-meta">Renovision (2010–2011) · Wipro Infotech (2008–2010) · PCS Technology (2007–2008)</div>
+    </div>
+
+    <div class="role-block">
+      <div class="role-period">2007 – 2011</div>
+      <div class="role-title">Operations &amp; Field Engineering</div>
+      <ul>
+        <li>Managed 30+ enterprise clients at Bharti Airtel Data Centre; server/network hardware support and IBM AIX (P-series) administration.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
 <!-- SKILLS -->
 <section id="skills">
-  <div class="section-inner">
-    <div class="sec-eyebrow">Expertise</div>
-    <h2 class="sec-heading">Core <em>competencies</em></h2>
-    <div class="skills-grid">
-      <div class="skill-card reveal"><div class="skill-icon">🚀</div><div class="skill-name">Service Delivery Management</div><div class="skill-desc">ITIL V4 · SLA ownership · multi-tower operations · onshore and offshore team leadership</div></div>
-      <div class="skill-card reveal"><div class="skill-icon">🔄</div><div class="skill-name">Transition & Transformation</div><div class="skill-desc">50+ enterprise deals · risk assessment · methodology definition · stakeholder management</div></div>
-      <div class="skill-card reveal"><div class="skill-icon">⚙️</div><div class="skill-name">Automation Leadership</div><div class="skill-desc">Programme strategy · use case identification · RBA · productivity industrialisation · Scrum</div></div>
-      <div class="skill-card reveal"><div class="skill-icon">🤖</div><div class="skill-name">AI-Enabled Operations</div><div class="skill-desc">AIOps · GenAI PoC delivery · AI workflow design · enterprise AI adoption</div></div>
-      <div class="skill-card reveal"><div class="skill-icon">🇪🇺</div><div class="skill-name">EU AI Act & Governance</div><div class="skill-desc">AI governance awareness · responsible AI · compliance positioning · European regulatory context</div></div>
-      <div class="skill-card reveal"><div class="skill-icon">🤝</div><div class="skill-name">Stakeholder Management</div><div class="skill-desc">C-level engagement · presales · cross-cultural team leadership · account management</div></div>
+  <p class="section-label">Expertise</p>
+  <h2>Core <em>competencies</em></h2>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-icon">🚀</div>
+      <div class="skill-title">Service Delivery Management</div>
+      <div class="skill-desc">ITIL V4 · SLA ownership · multi-tower operations · onshore and offshore team leadership</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🔄</div>
+      <div class="skill-title">Transition &amp; Transformation</div>
+      <div class="skill-desc">50+ enterprise deals · risk assessment · methodology definition · stakeholder management</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">⚙️</div>
+      <div class="skill-title">Automation Leadership</div>
+      <div class="skill-desc">Red Hat Ansible AAP · ServiceNow integration · RBA · use case identification · Scrum · productivity industrialisation</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🤖</div>
+      <div class="skill-title">AI-Enabled Operations</div>
+      <div class="skill-desc">AIOps · GenAI PoC delivery · AI workflow design · enterprise AI adoption · Dynatrace</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🇪🇺</div>
+      <div class="skill-title">EU AI Act &amp; Governance</div>
+      <div class="skill-desc">AI governance awareness · responsible AI · compliance positioning · European regulatory context</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🤝</div>
+      <div class="skill-title">Stakeholder Management</div>
+      <div class="skill-desc">C-level engagement · presales · cross-cultural team leadership · account management</div>
     </div>
   </div>
 </section>
 
 <!-- ACHIEVEMENTS -->
 <section id="achievements">
-  <div class="section-inner">
-    <div class="sec-eyebrow">Impact</div>
-    <h2 class="sec-heading">A few things <em>I'm proud of</em></h2>
-    <div class="ach-grid">
-      <div class="ach-card reveal"><div class="ach-num">50+</div><div class="ach-title">Client Transitions Led</div><div class="ach-desc">Onboarded clients across banking, aviation, cruise/shipping, railway, chemical, and fashion — spanning multiple continents.</div></div>
-      <div class="ach-card reveal"><div class="ach-num">$149M</div><div class="ach-title">Largest Single Deal</div><div class="ach-desc">Led transition programmes with individual deal values reaching USD 149 million — managing timelines, risk, and multi-stakeholder delivery.</div></div>
-      <div class="ach-card reveal"><div class="ach-num">9</div><div class="ach-title">Accounts Managed Simultaneously</div><div class="ach-desc">Coordinated automation demand and delivery across 9 enterprise accounts as Automation Tools Lead for Capgemini's French C&R practice.</div></div>
-      <div class="ach-card reveal"><div class="ach-num">CEO</div><div class="ach-title">Level Recognition</div><div class="ach-desc">Recognised by Capgemini CIS Infrastructure Services CEO for contributions to the France automation practice.</div></div>
+  <p class="section-label">Impact</p>
+  <h2>A few things <em>I'm proud of</em></h2>
+  <div class="achievements-grid">
+    <div class="achievement-card">
+      <div class="achievement-num">50+</div>
+      <div class="achievement-title">Client Transitions Led</div>
+      <div class="achievement-desc">Onboarded clients across banking, aviation, cruise/shipping, railway, chemical, and fashion — spanning multiple continents.</div>
+    </div>
+    <div class="achievement-card">
+      <div class="achievement-num">$149M</div>
+      <div class="achievement-title">Largest Single Deal</div>
+      <div class="achievement-desc">Led transition programmes with individual deal values reaching USD 149 million — managing timelines, risk, and multi-stakeholder delivery.</div>
+    </div>
+    <div class="achievement-card">
+      <div class="achievement-num">9</div>
+      <div class="achievement-title">Accounts Managed Simultaneously</div>
+      <div class="achievement-desc">Coordinated automation demand and delivery across 9 enterprise accounts as Automation Tools Lead for Capgemini's French C&amp;R practice.</div>
+    </div>
+    <div class="achievement-card">
+      <div class="achievement-num">72</div>
+      <div class="achievement-title">Network Use Cases Delivered</div>
+      <div class="achievement-desc">Drove an automation portfolio including 72 network use cases — F5 reboot/upgrade, Linux disk auto-heal, and automated file-system mounting.</div>
+    </div>
+    <div class="achievement-card">
+      <div class="achievement-num">CEO</div>
+      <div class="achievement-title">Level Recognition</div>
+      <div class="achievement-desc">Recognised by Capgemini CIS Infrastructure Services CEO for contributions to the France AIOps initiative.</div>
     </div>
   </div>
 </section>
 
 <!-- CERTIFICATIONS -->
 <section id="certifications">
-  <div class="section-inner">
-    <div class="sec-eyebrow">Credentials</div>
-    <h2 class="sec-heading">Certifications & <em>training</em></h2>
-    <div style="display:flex;flex-direction:column;gap:1.5rem;">
+  <p class="section-label">Credentials</p>
+  <h2>Certifications &amp; <em>training</em></h2>
 
-      <div>
-        <div class="sec-eyebrow" style="margin-bottom:0.75rem;">Certification</div>
-        <div class="cert-grid" style="grid-template-columns:repeat(3,1fr);">
-          <div class="cert-card"><div class="cert-name">ITIL V4 Foundation</div><div class="cert-issuer">Axelos</div></div>
-        </div>
+  <div class="cert-group">
+    <div class="cert-group-label">Certification</div>
+    <div class="cert-list">
+      <div class="cert-item">
+        <span class="cert-name">ITIL V4 Foundation</span>
+        <span class="cert-issuer">Axelos</span>
       </div>
+    </div>
+  </div>
 
-      <div>
-        <div class="sec-eyebrow" style="margin-bottom:0.75rem;">Personal Training — Self Funded</div>
-        <div class="cert-grid" style="grid-template-columns:repeat(3,1fr);">
-          <div class="cert-card"><div class="cert-name">PMP Training</div><div class="cert-issuer">PMI</div></div>
-          <div class="cert-card"><div class="cert-name">VMware vSphere 5</div><div class="cert-issuer">G.T. Enterprises</div></div>
-          <div class="cert-card"><div class="cert-name">RHEL 7</div><div class="cert-issuer">New Horizon Development Centre</div></div>
-        </div>
+  <div class="cert-group">
+    <div class="cert-group-label">Personal Training — Self Funded</div>
+    <div class="cert-list">
+      <div class="cert-item">
+        <span class="cert-name">PMP Training</span>
+        <span class="cert-issuer">PMI</span>
       </div>
-
-      <div>
-        <div class="sec-eyebrow" style="margin-bottom:0.75rem;">Capgemini Internal Training</div>
-        <div class="cert-grid" style="grid-template-columns:repeat(3,1fr);">
-          <div class="cert-card"><div class="cert-name">Automation Engineer Practitioner</div><div class="cert-issuer">Capgemini</div></div>
-          <div class="cert-card"><div class="cert-name">Engagement Manager</div><div class="cert-issuer">Capgemini</div></div>
-          <div class="cert-card"><div class="cert-name">Connected Manager</div><div class="cert-issuer">Capgemini</div></div>
-        </div>
+      <div class="cert-item">
+        <span class="cert-name">VMware vSphere 5</span>
+        <span class="cert-issuer">G.T. Enterprises</span>
       </div>
-
-      <div>
-        <div class="sec-eyebrow" style="margin-bottom:0.75rem;">Self-Initiated Badges — via Capgemini Platforms</div>
-        <div class="cert-grid" style="grid-template-columns:repeat(3,1fr);">
-          <div class="cert-card"><div class="cert-name">Azure AI Engineer Associate (AI-102)</div><div class="cert-issuer">Microsoft · Badge on LinkedIn</div></div>
-          <div class="cert-card"><div class="cert-name">Six Sigma White Belt</div><div class="cert-issuer">Udemy</div></div>
-          <div class="cert-card"><div class="cert-name">IT Security: Defense Against the Digital Dark Arts</div><div class="cert-issuer">Pluralsight / Coursera</div></div>
-        </div>
+      <div class="cert-item">
+        <span class="cert-name">RHEL 7</span>
+        <span class="cert-issuer">New Horizon Development Centre</span>
       </div>
+    </div>
+  </div>
 
+  <div class="cert-group">
+    <div class="cert-group-label">Capgemini Internal Training</div>
+    <div class="cert-list">
+      <div class="cert-item">
+        <span class="cert-name">Automation Engineer Practitioner</span>
+        <span class="cert-issuer">Capgemini</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Engagement Manager</span>
+        <span class="cert-issuer">Capgemini</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Connected Manager</span>
+        <span class="cert-issuer">Capgemini</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cert-group">
+    <div class="cert-group-label">Self-Initiated Badges — via Capgemini Platforms</div>
+    <div class="cert-list">
+      <div class="cert-item">
+        <span class="cert-name">Azure AI Engineer Associate (AI-102)</span>
+        <span class="cert-issuer">Microsoft · Badge on LinkedIn</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">Six Sigma White Belt</span>
+        <span class="cert-issuer">Udemy</span>
+      </div>
+      <div class="cert-item">
+        <span class="cert-name">IT Security: Defense Against the Digital Dark Arts</span>
+        <span class="cert-issuer">Pluralsight / Coursera</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="cert-group">
+    <div class="cert-group-label">Education</div>
+    <div class="cert-list">
+      <div class="cert-item">
+        <span class="cert-name">BCA — Bachelor of Computer Applications</span>
+        <span class="cert-issuer">Kumaon University, Uttarakhand (2000–2003)</span>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ROADMAP -->
 <section id="roadmap">
-  <div class="section-inner">
-    <div class="sec-eyebrow">Growth Plan</div>
-    <h2 class="sec-heading">Learning <em>roadmap 2026</em></h2>
-    <div class="roadmap-list">
-      <div class="roadmap-item reveal">
-        <div class="rm-phase"><span class="rm-badge">Now · 0–3 months</span><div class="rm-title">Quick Wins</div></div>
-        <div class="rm-courses">
-          <div class="rm-course"><div class="rm-num">1</div><div><div class="rm-cname">Generative AI for Business Leaders</div><div class="rm-cnote">Enterprise AI use cases, LLMs, AI workflows — Coursera / Udemy</div></div></div>
-          <div class="rm-course"><div class="rm-num">2</div><div><div class="rm-cname">EU AI Act — Business Awareness</div><div class="rm-cnote">France/Europe differentiator — LinkedIn Learning</div></div></div>
-          <div class="rm-course"><div class="rm-num">3</div><div><div class="rm-cname">Prompt Engineering for Business</div><div class="rm-cnote">Day-to-day AI productivity — Udemy</div></div></div>
+  <p class="section-label">Growth Plan</p>
+  <h2>Learning <em>roadmap 2026</em></h2>
+  <div class="roadmap-grid">
+    <div class="roadmap-phase">
+      <div class="roadmap-phase-label">Now · 0–3 months</div>
+      <div class="roadmap-phase-title">Quick Wins</div>
+      <div class="roadmap-items">
+        <div class="roadmap-item">
+          <div class="roadmap-num">1</div>
+          <div class="roadmap-text"><strong>Generative AI for Business Leaders</strong>Enterprise AI use cases, LLMs, AI workflows — Coursera / Udemy</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-num">2</div>
+          <div class="roadmap-text"><strong>EU AI Act — Business Awareness</strong>France/Europe differentiator — LinkedIn Learning</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-num">3</div>
+          <div class="roadmap-text"><strong>Prompt Engineering for Business</strong>Day-to-day AI productivity — Udemy</div>
         </div>
       </div>
-      <div class="roadmap-item reveal">
-        <div class="rm-phase"><span class="rm-badge">Build · 3–9 months</span><div class="rm-title">Strategic Credentials</div></div>
-        <div class="rm-courses">
-          <div class="rm-course"><div class="rm-num">4</div><div><div class="rm-cname">PROSCI Change Management Certification</div><div class="rm-cnote">Opens Transformation Manager roles in Europe</div></div></div>
-          <div class="rm-course"><div class="rm-num">5</div><div><div class="rm-cname">ITIL 4 Strategist or Specialist Module</div><div class="rm-cnote">Axelos / PeopleCert</div></div></div>
+    </div>
+
+    <div class="roadmap-phase">
+      <div class="roadmap-phase-label">Build · 3–9 months</div>
+      <div class="roadmap-phase-title">Strategic Credentials</div>
+      <div class="roadmap-items">
+        <div class="roadmap-item">
+          <div class="roadmap-num">4</div>
+          <div class="roadmap-text"><strong>PROSCI Change Management Certification</strong>Opens Transformation Manager roles in Europe</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-num">5</div>
+          <div class="roadmap-text"><strong>ITIL 4 Strategist or Specialist Module</strong>Axelos / PeopleCert</div>
         </div>
       </div>
-      <div class="roadmap-item reveal">
-        <div class="rm-phase"><span class="rm-badge">Long · 9–18 months</span><div class="rm-title">Market Positioning</div></div>
-        <div class="rm-courses">
-          <div class="rm-course"><div class="rm-num">6</div><div><div class="rm-cname">Azure AI Fundamentals (AI-900)</div><div class="rm-cnote">Microsoft Learn — free</div></div></div>
-          <div class="rm-course"><div class="rm-num">7</div><div><div class="rm-cname">French A2 → B1</div><div class="rm-cnote">Alliance Française · France retention lever</div></div></div>
+    </div>
+
+    <div class="roadmap-phase">
+      <div class="roadmap-phase-label">Long · 9–18 months</div>
+      <div class="roadmap-phase-title">Market Positioning</div>
+      <div class="roadmap-items">
+        <div class="roadmap-item">
+          <div class="roadmap-num">6</div>
+          <div class="roadmap-text"><strong>Azure AI Fundamentals (AI-900)</strong>Microsoft Learn — free</div>
+        </div>
+        <div class="roadmap-item">
+          <div class="roadmap-num">7</div>
+          <div class="roadmap-text"><strong>French A2 → B1</strong>Alliance Française · France retention lever</div>
         </div>
       </div>
     </div>
@@ -609,39 +954,19 @@ footer {
 
 <!-- CONTACT -->
 <section id="contact">
-  <div class="contact-inner">
-    <div class="contact-pre">Get in touch</div>
-    <h2 class="contact-h">Open to the right <em>opportunity</em></h2>
-    <p class="contact-sub">Looking for senior roles in Delivery, Transformation, and AI-Enabled Operations within international organisations in Europe. Based in France, available immediately, English-first interviews.</p>
-    <div class="contact-btns">
-      <a href="mailto:amitmesah@gmail.com" class="cbtn primary">Email Me</a>
-      <a href="https://linkedin.com/in/amitmesah" target="_blank" class="cbtn">LinkedIn</a>
-      <a href="Amit_Sah_CV.pdf" download class="cbtn">Download CV</a>
-    </div>
+  <p class="section-label">Get in touch</p>
+  <h2>Open to the right <em>opportunity</em></h2>
+  <p style="color:var(--muted); max-width:520px; margin: 0 auto 1rem;">Looking for senior roles in Delivery, Transformation, and AI-Enabled Operations within international organisations in Europe. Based in France, available immediately, English-first interviews.</p>
+  <div class="contact-links">
+    <a class="btn btn-primary" href="mailto:amitmesah@gmail.com">Email Me</a>
+    <a class="btn btn-ghost" href="https://linkedin.com/in/amitmesah" target="_blank">LinkedIn</a>
+    <a class="btn btn-ghost" href="https://amitmesah.github.io/Amit_Sah_CV.pdf" target="_blank">Download CV</a>
   </div>
 </section>
 
 <footer>
-  <span class="footer-name">Amit Sah</span>
-  <span class="footer-copy">© 2026 · amitmesah.github.io</span>
+  Amit Sah © 2026 · amitmesah.github.io
 </footer>
 
-<script>
-const observer = new IntersectionObserver(entries => {
-  entries.forEach((e, i) => {
-    if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 80);
-  });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-const navLinks = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let cur = '';
-  document.querySelectorAll('section[id]').forEach(s => {
-    if (window.scrollY >= s.offsetTop - 100) cur = s.id;
-  });
-  navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + cur ? 'var(--blue2)' : ''; });
-});
-</script>
 </body>
 </html>
