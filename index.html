@@ -3,161 +3,288 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amit Sah — Delivery &amp; Transformation Manager</title>
-<meta name="description" content="Delivery and Transformation Manager — 19 years in IT delivery, automation, and transformation. Based in France.">
+<title>Amit Sah — Delivery & Transformation Manager</title>
+<meta name="description" content="Amit Sah — Delivery & Transformation Manager. 19 years in IT delivery, automation, and AI-enabled operations. Based in France.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-:root {
-  --navy:  #0d1528;
-  --blue:  #3b82f6;
-  --text:  #334155;
-  --muted: #64748b;
-  --line:  #e2e8f0;
-  --bg:    #ffffff;
-}
+  :root {
+    --navy:        #0f2940;
+    --navy-deep:   #0a1f33;
+    --steel:       #4a7396;
+    --steel-light: #7d9bb3;
+    --ink:         #1c2a36;
+    --body-text:   #3c4a56;
+    --bg:          #f6f7f5;
+    --card-bg:     #ffffff;
+    --line:        #dde2e3;
+    --line-soft:   #e9ecec;
+  }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.7;
-}
+  html { scroll-behavior: smooth; }
 
-.page {
-  max-width: 680px;
-  margin: 0 auto;
-  padding: 4.5rem 1.5rem 3rem;
-}
+  body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    background: var(--bg);
+    color: var(--body-text);
+    line-height: 1.65;
+  }
 
-.accent {
-  width: 36px; height: 3px;
-  background: var(--blue);
-  margin-bottom: 1.5rem;
-}
+  h1, h2, h3, .serif {
+    font-family: 'Source Serif 4', serif;
+  }
 
-h1 {
-  font-size: 2.1rem;
-  font-weight: 700;
-  color: var(--navy);
-  margin-bottom: 0.4rem;
-  letter-spacing: -0.02em;
-}
+  a { color: var(--navy); }
 
-.role {
-  font-size: 1rem;
-  color: var(--blue);
-  font-weight: 500;
-  margin-bottom: 2rem;
-}
+  /* ===== LETTERHEAD ===== */
+  .letterhead {
+    background: var(--navy);
+    background-image:
+      repeating-linear-gradient(115deg, rgba(255,255,255,0.025) 0px, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 14px);
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid var(--steel);
+  }
+  .letterhead::after {
+    content: '';
+    position: absolute;
+    top: -40%; right: -10%;
+    width: 420px; height: 420px;
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 50%;
+  }
+  .letterhead::before {
+    content: '';
+    position: absolute;
+    top: -60%; right: 6%;
+    width: 560px; height: 560px;
+    border: 1px solid rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .letterhead-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3.6rem 1.75rem 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.4rem;
+    position: relative;
+    z-index: 1;
+  }
+  .mark {
+    flex: 0 0 auto;
+    width: 56px; height: 56px;
+    border: 1px solid rgba(255,255,255,0.35);
+    color: #fff;
+    font-family: 'Source Serif 4', serif;
+    font-size: 1.25rem;
+    letter-spacing: 0.02em;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .lh-text { color: #fff; }
+  .lh-name {
+    font-size: clamp(1.7rem, 4vw, 2.15rem);
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.3rem;
+  }
+  .lh-role {
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: var(--steel-light);
+    letter-spacing: 0.01em;
+  }
 
-.intro p {
-  font-size: 0.97rem;
-  margin-bottom: 1rem;
-}
+  /* ===== MAIN ===== */
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 3rem 1.75rem 4rem;
+  }
 
-.section-title {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 2.5rem 0 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 1px solid var(--line);
-}
+  .eyebrow {
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 0.9rem;
+  }
 
-.highlights { list-style: none; }
-.highlights li {
-  font-size: 0.95rem;
-  padding-left: 1.4rem;
-  margin-bottom: 0.85rem;
-  position: relative;
-}
-.highlights li::before {
-  content: '';
-  position: absolute;
-  left: 0; top: 0.6em;
-  width: 7px; height: 7px;
-  background: var(--blue);
-  border-radius: 50%;
-}
+  section { margin-bottom: 2.75rem; }
 
-.facts {
-  font-size: 0.9rem;
-  color: var(--muted);
-}
+  .intro p {
+    font-size: 1.01rem;
+    margin-bottom: 1rem;
+    max-width: 620px;
+  }
+  .intro p:last-child { margin-bottom: 0; }
 
-.links {
-  display: flex;
-  gap: 0.9rem;
-  flex-wrap: wrap;
-  margin-top: 1.5rem;
-}
-.btn {
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  padding: 0.75rem 1.6rem;
-  border-radius: 4px;
-}
-.btn-solid { background: var(--navy); color: #fff; }
-.btn-solid:hover { background: var(--blue); }
-.btn-line { border: 1px solid var(--line); color: var(--navy); }
-.btn-line:hover { border-color: var(--blue); color: var(--blue); }
+  h2.sec-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--navy);
+    letter-spacing: 0.01em;
+    margin-bottom: 1.1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--line);
+  }
 
-footer {
-  margin-top: 3.5rem;
-  padding-top: 1.25rem;
-  border-top: 1px solid var(--line);
-  font-size: 0.78rem;
-  color: var(--muted);
-}
+  .proud-list { list-style: none; }
+  .proud-list li {
+    display: flex;
+    gap: 0.85rem;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--line-soft);
+    font-size: 0.95rem;
+  }
+  .proud-list li:last-child { border-bottom: none; }
+  .proud-list .num {
+    flex: 0 0 auto;
+    font-family: 'Source Serif 4', serif;
+    color: var(--steel);
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding-top: 0.1rem;
+    width: 1.5rem;
+  }
 
-@media (max-width: 480px) {
-  .page { padding-top: 3rem; }
-  h1 { font-size: 1.8rem; }
-}
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem 2rem;
+  }
+  .detail-block .label {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 0.4rem;
+  }
+  .detail-block .val {
+    font-size: 0.92rem;
+    color: var(--ink);
+  }
+
+  .cta {
+    display: flex;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+    padding-top: 0.5rem;
+  }
+  .btn {
+    display: inline-block;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.75rem 1.6rem;
+    text-decoration: none;
+    border: 1px solid var(--navy);
+    transition: background 0.15s, color 0.15s;
+  }
+  .btn-primary {
+    background: var(--navy);
+    color: #fff;
+  }
+  .btn-primary:hover { background: var(--navy-deep); }
+  .btn-outline {
+    background: transparent;
+    color: var(--navy);
+  }
+  .btn-outline:hover { background: var(--navy); color: #fff; }
+
+  footer {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 1.75rem 1.75rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.78rem;
+    color: var(--steel-light);
+    border-top: 1px solid var(--line);
+  }
+
+  @media (max-width: 560px) {
+    .details-grid { grid-template-columns: 1fr; }
+    .letterhead-inner { gap: 1rem; }
+    .mark { width: 46px; height: 46px; font-size: 1.05rem; }
+  }
 </style>
 </head>
 <body>
-<div class="page">
 
-  <div class="accent"></div>
-  <h1>Amit Sah</h1>
-  <p class="role">Delivery &amp; Transformation Manager · Automation · AI-Enabled Operations</p>
+<header class="letterhead">
+  <div class="letterhead-inner">
+    <div class="mark">AS</div>
+    <div class="lh-text">
+      <div class="lh-name">Amit Sah</div>
+      <div class="lh-role">Delivery & Transformation Manager · Automation · AI-Enabled Operations</div>
+    </div>
+  </div>
+</header>
 
-  <div class="intro">
+<main>
+
+  <section class="intro">
+    <p class="eyebrow">About</p>
     <p>I've spent 19 years working in IT delivery, automation, and transformation — leading teams, onboarding clients, and making sure complex programmes actually land. Most of my work sits between technology and the people who need to use it.</p>
     <p>Currently based in France, working with European enterprise clients as part of Capgemini's onsite team.</p>
-  </div>
+  </section>
 
-  <div class="section-title">A few things I'm proud of</div>
-  <ul class="highlights">
-    <li>Onboarded 50+ enterprise clients onto Capgemini's tools and automation platform — individual deal values up to USD 149M — across banking, aviation, shipping, railway, and fashion industries.</li>
-    <li>Coordinated automation across 9 enterprise accounts simultaneously for Capgemini's French automation practice.</li>
-    <li>Coordinated Capgemini's global AIOps initiative for the France region as TIO Business Partner — recognised by the Capgemini CIS Infrastructure Services CEO.</li>
-    <li>Coordinated a GenAI proof-of-concept for LVMH — interfacing between development teams and client stakeholders on a document processing use case.</li>
-    <li>Currently leading the integration of Red Hat Ansible Automation Platform with ServiceNow, alongside a firewall operations task force.</li>
-  </ul>
+  <section>
+    <h2 class="sec-title">A few things I'm proud of</h2>
+    <ul class="proud-list">
+      <li><span class="num">01</span><span>Onboarded 50+ enterprise clients onto Capgemini's tools and automation platform — individual deal values up to USD 149M — across banking, aviation, shipping, railway, and fashion industries.</span></li>
+      <li><span class="num">02</span><span>Coordinated automation demand and delivery across 9 enterprise accounts simultaneously for Capgemini's French automation practice.</span></li>
+      <li><span class="num">03</span><span>Coordinated a GenAI proof-of-concept for LVMH — interfacing between development teams and client stakeholders on a document processing use case, delivering a clear go/no-go decision for the client's leadership.</span></li>
+      <li><span class="num">04</span><span>Leading the integration of Red Hat Ansible Automation Platform with ServiceNow — resolving a Windows execution constraint to enable automation across both Windows and Linux infrastructure.</span></li>
+      <li><span class="num">05</span><span>Leading a cross-domain mandate spanning automation delivery and firewall operations — running a task force that reduced ticket backlog, dependencies, and access gaps for the onshore team.</span></li>
+    </ul>
+  </section>
 
-  <div class="section-title">Details</div>
-  <p class="facts">
-    ITIL V4 Foundation · PMP-trained · Azure AI-102 badge<br>
-    English (fluent) · Hindi (native) · French (A2, learning)<br>
-    France · European timezone
-  </p>
+  <section>
+    <h2 class="sec-title">Details</h2>
+    <div class="details-grid">
+      <div class="detail-block">
+        <div class="label">Certification & Training</div>
+        <div class="val">ITIL V4 Foundation · PMP-trained · Azure AI-102 badge</div>
+      </div>
+      <div class="detail-block">
+        <div class="label">Recent Training (Udemy)</div>
+        <div class="val">EU AI Act — Compliance and Practical Impact · Prompt Engineering for Business</div>
+      </div>
+      <div class="detail-block">
+        <div class="label">Languages</div>
+        <div class="val">English (fluent) · Hindi (native) · French (A2, learning)</div>
+      </div>
+      <div class="detail-block">
+        <div class="label">Location</div>
+        <div class="val">France · European timezone</div>
+      </div>
+      <div class="detail-block">
+        <div class="label">Currently</div>
+        <div class="val">Capgemini Technology Services, onsite France</div>
+      </div>
+    </div>
+  </section>
 
-  <div class="links">
-    <a class="btn btn-solid" href="Amit_Sah_CV.pdf" download>Download CV</a>
-    <a class="btn btn-line" href="mailto:amitmesah@gmail.com">Email</a>
-    <a class="btn btn-line" href="https://linkedin.com/in/amitmesah" target="_blank">LinkedIn</a>
-  </div>
+  <section class="cta">
+    <a href="Amit_Sah_CV.pdf" download class="btn btn-primary">Download CV</a>
+    <a href="mailto:amitmesah@gmail.com" class="btn btn-outline">Email</a>
+    <a href="https://linkedin.com/in/amitmesah" target="_blank" class="btn btn-outline">LinkedIn</a>
+  </section>
 
-  <footer>© 2026 Amit Sah · amitmesah.github.io</footer>
+</main>
 
-</div>
+<footer>
+  <span>Amit Sah</span>
+  <span>amitmesah.github.io</span>
+</footer>
+
 </body>
 </html>
