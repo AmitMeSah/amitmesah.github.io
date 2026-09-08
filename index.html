@@ -152,6 +152,47 @@
     width: 1.5rem;
   }
 
+  /* ===== AI PROJECTS ===== */
+  .project-list { list-style: none; }
+  .project-list li {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--line-soft);
+    font-size: 0.95rem;
+  }
+  .project-list li:last-child { border-bottom: none; }
+  .project-title {
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .project-tag {
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--steel);
+    color: #fff;
+    padding: 0.15rem 0.5rem;
+    border-radius: 2px;
+  }
+  .project-tag.wip {
+    background: var(--steel-light);
+  }
+  .project-desc {
+    color: var(--body-text);
+    margin-bottom: 0.4rem;
+  }
+  .project-link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--steel);
+    text-decoration: none;
+  }
+  .project-link:hover { color: var(--navy); }
+
   .details-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -223,7 +264,7 @@
     <div class="mark">AS</div>
     <div class="lh-text">
       <div class="lh-name">Amit Sah</div>
-      <div class="lh-role">Enterprise Delivery & Transformation Leader · Automation · AI-Enabled Operations · EU AI Act & Governance</div>
+      <div class="lh-role">Enterprise Delivery &amp; Transformation Leader · Automation · AI-Enabled Operations · EU AI Act &amp; Governance</div>
     </div>
   </div>
 </header>
@@ -241,9 +282,30 @@
     <ul class="proud-list">
       <li><span class="num">01</span><span>Onboarded 50+ enterprise clients onto Capgemini's tools and automation platform — individual deal values up to USD 149M — across banking, aviation, shipping, railway, and fashion industries.</span></li>
       <li><span class="num">02</span><span>Coordinated automation demand and delivery across 9 enterprise accounts simultaneously for Capgemini's French automation practice.</span></li>
-      <li><span class="num">03</span><span>Coordinated a GenAI proof-of-concept for LVMH — interfacing between development teams and client stakeholders on a Document Intelligence use case, delivering a clear go/no-go decision for the client's leadership.</span></li>
+      <li><span class="num">03</span><span>Coordinated a GenAI proof-of-concept for LVMH — interfacing between development teams and client stakeholders on a Document Intelligence use case, delivering a structured assessment that gave leadership a clear, evidence-based strategic decision framework.</span></li>
       <li><span class="num">04</span><span>Leading the integration of Red Hat Ansible Automation Platform with ServiceNow — resolving a Windows execution constraint to enable automation across both Windows and Linux infrastructure.</span></li>
-      <li><span class="num">05</span><span>Leading a cross-domain mandate spanning automation delivery and firewall operations — running a task force that reduced ticket backlog, dependencies, and access gaps for the onshore team.</span></li>
+      <li><span class="num">05</span><span>Leading a cross-domain mandate spanning automation delivery and firewall operations — running a task force that reduced ticket backlog by ~74% in 7 weeks, resolving dependencies and access gaps for the onshore team.</span></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="sec-title">Personal AI Projects</h2>
+    <ul class="project-list">
+      <li>
+        <div class="project-title">
+          EU AI Act Risk Self-Assessment Tool
+          <span class="project-tag">Live</span>
+        </div>
+        <p class="project-desc">A client-side compliance tool that walks users through the EU AI Act's official classification logic — mapping their AI system to prohibited, high-risk, limited, or minimal risk tiers, with citations to specific articles and annexes. Runs entirely in the browser; no data leaves the device.</p>
+        <a href="https://amitmesah.github.io/EU-AI-Act-Checker/" target="_blank" class="project-link">→ Try it live</a>
+      </li>
+      <li>
+        <div class="project-title">
+          Multi-Modal Mood Detection System
+          <span class="project-tag wip">In Progress</span>
+        </div>
+        <p class="project-desc">A personal project exploring AI-based emotional inference across multiple input types. Text and audio analysis are complete and functional; video-based detection is currently in development.</p>
+      </li>
     </ul>
   </section>
 
@@ -251,8 +313,8 @@
     <h2 class="sec-title">Details</h2>
     <div class="details-grid">
       <div class="detail-block">
-        <div class="label">Certification & Training</div>
-        <div class="val">ITIL V4 Foundation · PMP-trained · Azure AI-102 badge</div>
+        <div class="label">Certification &amp; Training</div>
+        <div class="val">ITIL V4 Foundation · Automation Engineer Practitioner · Engagement Manager (Capgemini)</div>
       </div>
       <div class="detail-block">
         <div class="label">Recent Training (Udemy)</div>
@@ -264,7 +326,7 @@
       </div>
       <div class="detail-block">
         <div class="label">Languages</div>
-        <div class="val">English (fluent) · Hindi (native) · French (A2, learning)</div>
+        <div class="val">English (fluent) · Hindi (native) · French (A2, actively developing)</div>
       </div>
       <div class="detail-block">
         <div class="label">Location</div>
